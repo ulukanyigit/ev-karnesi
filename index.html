@@ -81,7 +81,7 @@ button { cursor: pointer; }
 #map { position: absolute; inset: 0; }
 
 /* üst çubuk */
-.top { position: absolute; z-index: 5; top: 16px; left: max(16px, env(safe-area-inset-left, 0px)); right: max(16px, env(safe-area-inset-right, 0px)); display: flex; gap: 10px; align-items: flex-start; pointer-events: none; }
+.top { position: absolute; z-index: 8; top: 16px; left: max(16px, env(safe-area-inset-left, 0px)); right: max(16px, env(safe-area-inset-right, 0px)); display: flex; gap: 10px; align-items: flex-start; pointer-events: none; }
 .top > * { pointer-events: auto; }
 .brand { display: flex; align-items: center; gap: 10px; height: 46px; padding: 0 18px 0 14px; background: var(--surface); border-radius: var(--r-ctl); box-shadow: var(--shadow); flex: none; }
 .brand-mark { width: 22px; height: 22px; flex: none; }
@@ -90,7 +90,7 @@ button { cursor: pointer; }
 .distwrap { position: relative; flex: none; }
 .distbtn { height: 46px; border: 0; border-radius: var(--r-ctl); background: var(--ink); color: var(--surface); box-shadow: var(--shadow); padding: 0 16px 0 18px; display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; }
 .distbtn svg { width: 12px; height: 12px; }
-.distpop { position: absolute; top: 54px; left: 0; width: min(520px, calc(100vw - 32px)); background: var(--surface); border-radius: 18px; box-shadow: var(--shadow); padding: 16px; z-index: 7; }
+.distpop { position: absolute; top: 54px; left: 0; width: min(520px, calc(100vw - 32px)); max-height: calc(100vh - 110px); overflow-y: auto; overscroll-behavior: contain; background: var(--surface); border-radius: 18px; box-shadow: var(--shadow); padding: 16px; z-index: 7; }
 .distpop h3 { margin: 0 0 2px; font-size: 16px; font-weight: 800; letter-spacing: -.01em; }
 .distpop p { margin: 0 0 12px; font-size: 12.5px; color: var(--ink-3); }
 .distgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
@@ -301,7 +301,7 @@ button { cursor: pointer; }
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-<script>window.EVINDEX=[{"key": "atasehir", "name": "Ataşehir", "n": 27155}, {"key": "bakirkoy", "name": "Bakırköy", "n": 8384}, {"key": "beyoglu", "name": "Beyoğlu", "n": 10979}, {"key": "besiktas", "name": "Beşiktaş", "n": 8848}, {"key": "fatih", "name": "Fatih", "n": 30761}, {"key": "kadikoy", "name": "Kadıköy", "n": 20024}, {"key": "maltepe", "name": "Maltepe", "n": 25961}, {"key": "umraniye", "name": "Ümraniye", "n": 32283}, {"key": "uskudar", "name": "Üsküdar", "n": 25989}, {"key": "sisli", "name": "Şişli", "n": 8920}];</script>
+<script>window.EVINDEX=[{"key": "adalar", "name": "Adalar", "n": 6093, "cov": 95}, {"key": "arnavutkoy", "name": "Arnavutköy", "n": 5752, "cov": 17}, {"key": "atasehir", "name": "Ataşehir", "n": 27156, "cov": 98}, {"key": "avcilar", "name": "Avcılar", "n": 19471, "cov": 73}, {"key": "bahcelievler", "name": "Bahçelievler", "n": 10957, "cov": 47}, {"key": "bakirkoy", "name": "Bakırköy", "n": 8387, "cov": 69}, {"key": "bayrampasa", "name": "Bayrampaşa", "n": 17603, "cov": 84}, {"key": "bagcilar", "name": "Bağcılar", "n": 23455, "cov": 54}, {"key": "basaksehir", "name": "Başakşehir", "n": 16003, "cov": 57}, {"key": "beykoz", "name": "Beykoz", "n": 33906, "cov": 66}, {"key": "beylikduzu", "name": "Beylikdüzü", "n": 5335, "cov": 41}, {"key": "beyoglu", "name": "Beyoğlu", "n": 10979, "cov": 40}, {"key": "besiktas", "name": "Beşiktaş", "n": 8848, "cov": 49}, {"key": "buyukcekmece", "name": "Büyükçekmece", "n": 17503, "cov": 55}, {"key": "catalca", "name": "Çatalca", "n": 5402, "cov": 20}, {"key": "cekmekoy", "name": "Çekmeköy", "n": 13698, "cov": 66}, {"key": "esenler", "name": "Esenler", "n": 21709, "cov": 91}, {"key": "esenyurt", "name": "Esenyurt", "n": 22656, "cov": 57}, {"key": "eyupsultan", "name": "Eyüpsultan", "n": 25410, "cov": 73}, {"key": "fatih", "name": "Fatih", "n": 30783, "cov": 71}, {"key": "gaziosmanpasa", "name": "Gaziosmanpaşa", "n": 26650, "cov": 90}, {"key": "gungoren", "name": "Güngören", "n": 10672, "cov": 97}, {"key": "kadikoy", "name": "Kadıköy", "n": 20024, "cov": 79}, {"key": "kartal", "name": "Kartal", "n": 24484, "cov": 81}, {"key": "kagithane", "name": "Kâğıthane", "n": 17442, "cov": 60}, {"key": "kucukcekmece", "name": "Küçükçekmece", "n": 25196, "cov": 63}, {"key": "maltepe", "name": "Maltepe", "n": 25962, "cov": 89}, {"key": "pendik", "name": "Pendik", "n": 24025, "cov": 46}, {"key": "sancaktepe", "name": "Sancaktepe", "n": 27965, "cov": 92}, {"key": "sariyer", "name": "Sarıyer", "n": 17535, "cov": 34}, {"key": "sile", "name": "Şile", "n": 8634, "cov": 45}, {"key": "silivri", "name": "Silivri", "n": 16268, "cov": 35}, {"key": "sisli", "name": "Şişli", "n": 8932, "cov": 43}, {"key": "sultanbeyli", "name": "Sultanbeyli", "n": 30947, "cov": 91}, {"key": "sultangazi", "name": "Sultangazi", "n": 34483, "cov": 101}, {"key": "tuzla", "name": "Tuzla", "n": 19818, "cov": 68}, {"key": "umraniye", "name": "Ümraniye", "n": 32283, "cov": 60}, {"key": "uskudar", "name": "Üsküdar", "n": 25991, "cov": 59}, {"key": "zeytinburnu", "name": "Zeytinburnu", "n": 13862, "cov": 85}];</script>
 <script>// Ev Karnesi hesap motoru — güneş, gölge, deniz manzarası, simge görüş hattı
 // Yerel metrik düzlem (eşdikdörtgen, merkez etrafında ~2 km için < 0.1% hata)
 (function (root) {
@@ -761,9 +761,9 @@ async function activate(key) {
 function renderDists(key) {
   const cur = DISTRICTS.find(x => x.key === key);
   $('#distName').textContent = cur ? cur.name : 'İlçe seç';
-  const byName = Object.fromEntries(DISTRICTS.map(x => [x.name, x]));
-  $('#distPop').innerHTML = `<h3>İlçe seç</h3><p>${DISTRICTS.length} ilçe hazır, diğerleri sırayla ekleniyor.</p><div class="distgrid">` +
-    ALL_DISTRICTS.map(n => { const d = byName[n]; return d ? `<button data-dist="${d.key}" aria-current="${d.key === key}">${n}<small class="num">${d.n.toLocaleString('tr-TR')} bina</small></button>` : `<button disabled>${n}<small>sırada</small></button>`; }).join('') + '</div>';
+  const byName = Object.fromEntries(DISTRICTS.map(x => [x.name.replace('â', 'a'), x]));
+  $('#distPop').innerHTML = `<h3>İlçe seç</h3><p>${DISTRICTS.length === ALL_DISTRICTS.length ? 'Kayıt oranı: OpenStreetMap\'teki bina sayısının İBB 2017 sayımına oranı.' : DISTRICTS.length + ' ilçe hazır, diğerleri sırayla ekleniyor.'}</p><div class="distgrid">` +
+    ALL_DISTRICTS.map(n => { const d = byName[n]; return d ? `<button data-dist="${d.key}" aria-current="${d.key === key}">${n}<small class="num">${d.n.toLocaleString('tr-TR')} bina${d.cov ? `, kayıt %${Math.min(d.cov, 100)}` : ''}</small></button>` : `<button disabled>${n}<small>sırada</small></button>`; }).join('') + '</div>';
 }
 function togglePop(open) { $('#distPop').hidden = !open; $('#distBtn').setAttribute('aria-expanded', open); }
 $('#distBtn').addEventListener('click', e => { e.stopPropagation(); togglePop($('#distPop').hidden); });
@@ -939,8 +939,8 @@ function renderPanel() {
   const gt = gTransit(tr);
   const dl = ['market', 'pharmacy', 'park'].map(c => w[c] ? w[c][0] : 20);
   const gd = gDaily(dl.reduce((a, c) => a + c, 0) / 3);
-  const gq = ms ? gQuake(ms.ratio) : 3;
-  const grades = [gs, gv, gt, gd, gq], avg = grades.reduce((a, c) => a + c, 0) / 5;
+  const gq = ms ? gQuake(ms.ratio) : null;
+  const grades = [gs, gv, gt, gd, gq].filter(g => g !== null), avg = grades.reduce((a, c) => a + c, 0) / grades.length;
   const belge = avg >= 4.25 ? ['takdir', 'Takdir belgesi aldı'] : avg >= 3.5 ? ['tesekkur', 'Teşekkür belgesi aldı'] : ['', 'Belge yok, sınıfı geçti'];
   const bestW = fsW.best;
   const lit = P.S.length ? P.times.filter((t, j) => P.S.some(col => eng.floorZ(i, k) > col[j])) : [];
@@ -985,9 +985,9 @@ function renderPanel() {
       <div class="krow"><div><b>Deniz manzarası</b><span>${sea.deg > 0 ? `Denizi ${sea.deg}° açıyla görür${sea.near > 3000 ? ' (uzaktan, yaklaşık)' : ''}${lms.length ? ', ' + esc(lms[0].name) + ' dahil' : ''}` : 'Bu kattan deniz görünmüyor'}</span></div>${gradeBox(gv)}</div>
       <div class="krow"><div><b>Ulaşım</b><span>${w.rail ? `Raylı sisteme ${Math.round(w.rail[0])} dk` : 'Raylı sistem uzak'}${w.ferry ? `, iskeleye ${Math.round(w.ferry[0])} dk yürüme` : ''}</span></div>${gradeBox(gt)}</div>
       <div class="krow"><div><b>Gündelik ihtiyaç</b><span>Market ${Math.round(dl[0])} dk, eczane ${Math.round(dl[1])} dk, park ${Math.round(dl[2])} dk</span></div>${gradeBox(gd)}</div>
-      <div class="krow"><div><b>Deprem riski</b><span>${ms ? `Mahallede ağır hasar beklenen bina oranı %${fmt1(ms.ratio)}` : 'Mahalle verisi yok'}</span></div>${gradeBox(gq)}</div>
+      <div class="krow"><div><b>Deprem riski</b><span>${ms ? `Mahallede ağır hasar beklenen bina oranı %${fmt1(ms.ratio)}` : 'Bu mahalle İBB 2017 verisinde yok (yeni kurulmuş ya da adı değişmiş), nota katılmadı'}</span></div>${gq ? gradeBox(gq) : '<div class="grade"><strong>–</strong><small>Veri yok</small></div>'}</div>
     </div>
-    <div class="avg"><div><div class="n num">${fmt1(avg)}</div></div><div class="belge ${belge[0]}">${belge[1]}<small>5 üzerinden ortalama</small></div></div>
+    <div class="avg"><div><div class="n num">${fmt1(avg)}</div></div><div class="belge ${belge[0]}">${belge[1]}<small>5 üzerinden ortalama${grades.length < 5 ? ', 4 ders' : ''}</small></div></div>
   </section>
 
   <section class="sec">
@@ -1033,7 +1033,7 @@ function renderPanel() {
     <p class="note" style="margin-top:4px">İBB'nin Mw 7,5 gece senaryosunda ${esc(b.m)} için. İstanbul'daki mahallelerin ortancası %${fmt1(DATA.ist_median)}.</p>
     <div class="age"><i style="width:${ms.pre80 / ageTot * 100}%;background:var(--g1)"></i><i style="width:${ms.y80_00 / ageTot * 100}%;background:var(--g3)"></i><i style="width:${ms.post00 / ageTot * 100}%;background:var(--g4)"></i></div>
     <div class="agekeys num"><span>1980 öncesi %${Math.round(ms.pre80 / ageTot * 100)}</span><span>1980–2000 %${Math.round(ms.y80_00 / ageTot * 100)}</span><span>2000 sonrası %${Math.round(ms.post00 / ageTot * 100)}</span></div>
-    <p class="note">Binanın kendi yapım yılı ve zemin etüdü için belediyeye ya da bir uzmana başvur. En yakın toplanma alanını e-Devlet'teki AFAD Acil Toplanma Alanı sorgusundan öğrenebilirsin.</p>` : '<p class="note">Bu mahalle için senaryo verisi bulunamadı.</p>'}
+    <p class="note">Binanın kendi yapım yılı ve zemin etüdü için belediyeye ya da bir uzmana başvur. En yakın toplanma alanını e-Devlet'teki AFAD Acil Toplanma Alanı sorgusundan öğrenebilirsin.</p>` : '<p class="note">Bu mahalle İBB\'nin 2017 deprem senaryosu verisinde yer almıyor. Muhtemelen o tarihten sonra kurulmuş ya da adı değişmiş.</p>'}
   </section>
 
   <div class="about">

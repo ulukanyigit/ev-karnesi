@@ -10,8 +10,8 @@ RAW = "/mnt/user-data/uploads/EV KARNESİ/data/raw/"
 RAWP = "/home/claude/evk/raw_pbf/"
 CFG = {
  'kadikoy': dict(name='Kadıköy', ilce='KADIKÖY', raw=RAWP+'kadikoy/', seaBB=None, seaRange=9000, rail={}, sample='Moda Caddesi No: 120-128',
-   places=None, landmarks='city', coast=RAW+'coastline_city.json'),
- 'umraniye': dict(name='Ümraniye', ilce='ÜMRANİYE', raw=RAWP+'umraniye/', seaBB=None, coast=RAW+'coastline_city.json', seaRange=9000, rail={}, sample=None, places=None,
+   places=None, landmarks='city', coast='/home/claude/evk/prov/coastline_prov.json'),
+ 'umraniye': dict(name='Ümraniye', ilce='ÜMRANİYE', raw=RAWP+'umraniye/', seaBB=None, coast='/home/claude/evk/prov/coastline_prov.json', seaRange=9000, rail={}, sample=None, places=None,
    landmarks=[dict(name='Büyük Çamlıca Camii',lon=29.07031,lat=41.03443,z=330),dict(name='15 Temmuz Şehitler Köprüsü',lon=29.03433,lat=41.04546,z=165),
      dict(name='Fatih Sultan Mehmet Köprüsü',lon=29.06117,lat=41.09130,z=105),dict(name='Kız Kulesi',lon=29.00406,lat=41.02111,z=30),
      dict(name='Galata Kulesi',lon=28.97421,lat=41.02563,z=100),dict(name='Tarihi Yarımada',lon=28.98018,lat=41.00857,z=90)]),
@@ -21,12 +21,13 @@ CITY_LM=[dict(name='Kız Kulesi',lon=29.00406,lat=41.02111,z=30),dict(name='Gala
   dict(name='15 Temmuz Şehitler Köprüsü',lon=29.03433,lat=41.04546,z=165),dict(name='Fatih Sultan Mehmet Köprüsü',lon=29.06117,lat=41.09130,z=105),
   dict(name='Büyük Çamlıca Camii',lon=29.07031,lat=41.03443,z=330),dict(name='Haydarpaşa Garı',lon=29.01917,lat=40.99657,z=40),
   dict(name='Dolmabahçe Sarayı',lon=29.0005,lat=41.0392,z=25),dict(name='Adalar',lon=29.05,lat=40.9097,z=110),dict(name='Fenerbahçe Feneri',lon=29.03647,lat=40.96942,z=20)]
-NAMES={'kadikoy':'Kadıköy','umraniye':'Ümraniye','besiktas':'Beşiktaş','sisli':'Şişli','beyoglu':'Beyoğlu','fatih':'Fatih','uskudar':'Üsküdar','atasehir':'Ataşehir','bakirkoy':'Bakırköy','maltepe':'Maltepe'}
+NAMES={k:v['name'] for k,v in json.load(open('/home/claude/evk/prov/districts.json')).items()}
 key = sys.argv[1]
 if key not in CFG:
-    CFG[key]=dict(name=NAMES[key], ilce=None, raw=RAWP+key+'/', seaBB=None, seaRange=9000, rail={}, sample=None, places=None, landmarks='city', coast=RAW+'coastline_city.json')
+    CFG[key]=dict(name=NAMES[key], ilce=None, raw=RAWP+key+'/', seaBB=None, seaRange=9000, rail={}, sample=None, places=None, landmarks='city', coast='/home/claude/evk/prov/coastline_prov.json')
 C = CFG[key]; R = C['raw']
-if C['ilce'] is None: C['ilce']=C['name'].replace('i','İ').replace('ı','I').upper()
+if C['ilce'] is None: C['ilce']=C['name'].replace('â','a').replace('i','İ').replace('ı','I').upper()
+if C['ilce']=='EYÜPSULTAN': C['ilce']='EYÜP'
 def tr_up(s): return s.replace('i','İ').replace('ı','I').upper()
 
 # ---------- district boundary / center ----------
@@ -50,11 +51,11 @@ def INV(x,y): return (LON0+x/KX, LAT0+y/KY)
 import os as _os
 if C['seaBB'] is None:
     b_ = ilce_poly.bounds; C['seaBB'] = (b_[0]-0.09, b_[1]-0.07, b_[2]+0.09, b_[3]+0.07)
-_dp = R+"dem_cop30.tif" if _os.path.exists(R+"dem_cop30.tif") else RAW+"dem_city.tif"
+_dp = R+"dem_cop30.tif" if _os.path.exists(R+"dem_cop30.tif") else RAW+"dem_prov.tif"
 t=tifffile.TiffFile(_dp); dem=t.pages[0].asarray().astype(float)
 sc=t.pages[0].tags['ModelPixelScaleTag'].value; tp=t.pages[0].tags['ModelTiepointTag'].value
 dlon0, dlat0, dstep = tp[3], tp[4], sc[0]
-if _dp.endswith('dem_city.tif'):
+if _dp.endswith('dem_prov.tif'):
     W_,S_,E_,N_ = C['seaBB']
     c0=max(0,int((W_-dlon0)/dstep)); c1=min(dem.shape[1],int((E_-dlon0)/dstep)+1)
     r0=max(0,int((dlat0-N_)/dstep)); r1=min(dem.shape[0],int((dlat0-S_)/dstep)+1)

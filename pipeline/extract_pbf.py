@@ -3,7 +3,10 @@ import osmium, json, os, sys, re, math
 from shapely.geometry import LineString, Point, box
 from shapely.ops import polygonize, unary_union
 from shapely import STRtree
-PBF="/mnt/user-data/uploads/EV KARNESİ/data/raw/Istanbul.osm.pbf"
+import argparse
+_ap=argparse.ArgumentParser(); _ap.add_argument("--pbf",default="/mnt/user-data/uploads/EV KARNESİ/data/raw/Istanbul.osm.pbf"); _ap.add_argument("keys",nargs="*")
+_args=_ap.parse_args()
+PBF=_args.pbf
 OUT="/home/claude/evk/raw_pbf/"
 def slug(n):
     t=n.lower().translate(str.maketrans('çğıöşüâîû','cgiosuaiu')).replace('i̇','i')
@@ -78,7 +81,7 @@ for rid,r in r1.rel.items():
 print('districts',len(dists))
 mah=[(rid,relpoly(rid)) for rid,r in r1.rel.items() if r['tags'].get('admin_level')=='8' and r['tags'].get('boundary')=='administrative']
 mah=[(rid,p) for rid,p in mah if p is not None]
-want=set(sys.argv[1:])
+want=set(_args.keys)
 # spatial index helpers
 def cen(geom): return Point(sum(p['lon'] for p in geom)/len(geom), sum(p['lat'] for p in geom)/len(geom))
 for rid,(name,poly) in dists.items():

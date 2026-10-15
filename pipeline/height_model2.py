@@ -7,7 +7,7 @@ from shapely.geometry import Polygon
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import KFold
 RAW='/home/claude/evk/raw_pbf/'
-GBA={int(k):v for k,v in json.load(open('/mnt/user-data/uploads/EV KARNESİ/data/raw/gba_city.json')).items()}
+GBA={int(k):v for k,v in json.load(open('/mnt/user-data/uploads/EV KARNESİ/data/raw/gba_prov.json')).items()}
 KEYS=sys.argv[1:]
 TY=['apartments','house','residential','industrial','commercial','retail','detached','office','school','yes']
 allX=[]; ally=[]; meta=[]
