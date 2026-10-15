@@ -1,0 +1,1087 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>html,body{margin:0;height:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>Ev Karnesi</title>
+<meta name="description" content="Kadıköy ve Ümraniye'de bir binaya dokun: hangi kat kışın kaç saat güneş alır, denizi görür mü, metroya kaç dakika, mahallenin deprem senaryosu ne diyor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..700&display=swap">
+<style>
+.maplibregl-map{font:12px/20px Helvetica Neue,Arial,Helvetica,sans-serif;overflow:hidden;position:relative;-webkit-tap-highlight-color:rgb(0 0 0/0)}.maplibregl-canvas{left:0;position:absolute;top:0}.maplibregl-map:fullscreen{height:100%;width:100%}.maplibregl-ctrl-group button.maplibregl-ctrl-compass{touch-action:none}.maplibregl-canvas-container.maplibregl-interactive,.maplibregl-ctrl-group button.maplibregl-ctrl-compass{cursor:grab;-webkit-user-select:none;-moz-user-select:none;user-select:none}.maplibregl-canvas-container.maplibregl-interactive.maplibregl-track-pointer{cursor:pointer}.maplibregl-canvas-container.maplibregl-interactive:active,.maplibregl-ctrl-group button.maplibregl-ctrl-compass:active{cursor:grabbing}.maplibregl-canvas-container.maplibregl-touch-zoom-rotate,.maplibregl-canvas-container.maplibregl-touch-zoom-rotate .maplibregl-canvas{touch-action:pan-x pan-y}.maplibregl-canvas-container.maplibregl-touch-drag-pan,.maplibregl-canvas-container.maplibregl-touch-drag-pan .maplibregl-canvas{touch-action:pinch-zoom}.maplibregl-canvas-container.maplibregl-touch-zoom-rotate.maplibregl-touch-drag-pan,.maplibregl-canvas-container.maplibregl-touch-zoom-rotate.maplibregl-touch-drag-pan .maplibregl-canvas{touch-action:none}.maplibregl-canvas-container.maplibregl-touch-drag-pan.maplibregl-cooperative-gestures,.maplibregl-canvas-container.maplibregl-touch-drag-pan.maplibregl-cooperative-gestures .maplibregl-canvas{touch-action:pan-x pan-y}.maplibregl-ctrl-bottom-left,.maplibregl-ctrl-bottom-right,.maplibregl-ctrl-top-left,.maplibregl-ctrl-top-right{pointer-events:none;position:absolute;z-index:2}.maplibregl-ctrl-top-left{left:0;top:0}.maplibregl-ctrl-top-right{right:0;top:0}.maplibregl-ctrl-bottom-left{bottom:0;left:0}.maplibregl-ctrl-bottom-right{bottom:0;right:0}.maplibregl-ctrl{clear:both;pointer-events:auto;transform:translate(0)}.maplibregl-ctrl-top-left .maplibregl-ctrl{float:left;margin:10px 0 0 10px}.maplibregl-ctrl-top-right .maplibregl-ctrl{float:right;margin:10px 10px 0 0}.maplibregl-ctrl-bottom-left .maplibregl-ctrl{float:left;margin:0 0 10px 10px}.maplibregl-ctrl-bottom-right .maplibregl-ctrl{float:right;margin:0 10px 10px 0}.maplibregl-ctrl-group{background:#fff;border-radius:4px}.maplibregl-ctrl-group:not(:empty){box-shadow:0 0 0 2px rgba(0,0,0,.1)}@media (forced-colors:active){.maplibregl-ctrl-group:not(:empty){box-shadow:0 0 0 2px ButtonText}}.maplibregl-ctrl-group button{background-color:transparent;border:0;box-sizing:border-box;cursor:pointer;display:block;height:29px;outline:none;padding:0;width:29px}.maplibregl-ctrl-group button+button{border-top:1px solid #ddd}.maplibregl-ctrl button .maplibregl-ctrl-icon{background-position:50%;background-repeat:no-repeat;display:block;height:100%;width:100%}@media (forced-colors:active){.maplibregl-ctrl-icon{background-color:transparent}.maplibregl-ctrl-group button+button{border-top:1px solid ButtonText}}.maplibregl-ctrl button::-moz-focus-inner{border:0;padding:0}.maplibregl-ctrl-attrib-button:focus,.maplibregl-ctrl-group button:focus{box-shadow:0 0 2px 2px #0096ff}.maplibregl-ctrl button:disabled{cursor:not-allowed}.maplibregl-ctrl button:disabled .maplibregl-ctrl-icon{opacity:.25}.maplibregl-ctrl button:not(:disabled):hover{background-color:rgb(0 0 0/5%)}.maplibregl-ctrl-group button:focus:focus-visible{box-shadow:0 0 2px 2px #0096ff}.maplibregl-ctrl-group button:focus:not(:focus-visible){box-shadow:none}.maplibregl-ctrl-group button:focus:first-child{border-radius:4px 4px 0 0}.maplibregl-ctrl-group button:focus:last-child{border-radius:0 0 4px 4px}.maplibregl-ctrl-group button:focus:only-child{border-radius:inherit}.maplibregl-ctrl button.maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='M10 13c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h9c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='M14.5 8.5c-.75 0-1.5.75-1.5 1.5v3h-3c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h3v3c0 .75.75 1.5 1.5 1.5S16 19.75 16 19v-3h3c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13h-3v-3c0-.75-.75-1.5-1.5-1.5'/%3E%3C/svg%3E")}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M10 13c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h9c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M14.5 8.5c-.75 0-1.5.75-1.5 1.5v3h-3c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h3v3c0 .75.75 1.5 1.5 1.5S16 19.75 16 19v-3h3c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13h-3v-3c0-.75-.75-1.5-1.5-1.5'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M10 13c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h9c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M14.5 8.5c-.75 0-1.5.75-1.5 1.5v3h-3c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h3v3c0 .75.75 1.5 1.5 1.5S16 19.75 16 19v-3h3c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13h-3v-3c0-.75-.75-1.5-1.5-1.5'/%3E%3C/svg%3E")}}.maplibregl-ctrl button.maplibregl-ctrl-fullscreen .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='M24 16v5.5c0 1.75-.75 2.5-2.5 2.5H16v-1l3-1.5-4-5.5 1-1 5.5 4 1.5-3zM6 16l1.5 3 5.5-4 1 1-4 5.5 3 1.5v1H7.5C5.75 24 5 23.25 5 21.5V16zm7-11v1l-3 1.5 4 5.5-1 1-5.5-4L6 13H5V7.5C5 5.75 5.75 5 7.5 5zm11 2.5c0-1.75-.75-2.5-2.5-2.5H16v1l3 1.5-4 5.5 1 1 5.5-4 1.5 3h1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-shrink .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M18.5 16c-1.75 0-2.5.75-2.5 2.5V24h1l1.5-3 5.5 4 1-1-4-5.5 3-1.5v-1zM13 18.5c0-1.75-.75-2.5-2.5-2.5H5v1l3 1.5L4 24l1 1 5.5-4 1.5 3h1zm3-8c0 1.75.75 2.5 2.5 2.5H24v-1l-3-1.5L25 5l-1-1-5.5 4L17 5h-1zM10.5 13c1.75 0 2.5-.75 2.5-2.5V5h-1l-1.5 3L5 4 4 5l4 5.5L5 12v1z'/%3E%3C/svg%3E")}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-fullscreen .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M24 16v5.5c0 1.75-.75 2.5-2.5 2.5H16v-1l3-1.5-4-5.5 1-1 5.5 4 1.5-3zM6 16l1.5 3 5.5-4 1 1-4 5.5 3 1.5v1H7.5C5.75 24 5 23.25 5 21.5V16zm7-11v1l-3 1.5 4 5.5-1 1-5.5-4L6 13H5V7.5C5 5.75 5.75 5 7.5 5zm11 2.5c0-1.75-.75-2.5-2.5-2.5H16v1l3 1.5-4 5.5 1 1 5.5-4 1.5 3h1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-shrink .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M18.5 16c-1.75 0-2.5.75-2.5 2.5V24h1l1.5-3 5.5 4 1-1-4-5.5 3-1.5v-1zM13 18.5c0-1.75-.75-2.5-2.5-2.5H5v1l3 1.5L4 24l1 1 5.5-4 1.5 3h1zm3-8c0 1.75.75 2.5 2.5 2.5H24v-1l-3-1.5L25 5l-1-1-5.5 4L17 5h-1zM10.5 13c1.75 0 2.5-.75 2.5-2.5V5h-1l-1.5 3L5 4 4 5l4 5.5L5 12v1z'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-fullscreen .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M24 16v5.5c0 1.75-.75 2.5-2.5 2.5H16v-1l3-1.5-4-5.5 1-1 5.5 4 1.5-3zM6 16l1.5 3 5.5-4 1 1-4 5.5 3 1.5v1H7.5C5.75 24 5 23.25 5 21.5V16zm7-11v1l-3 1.5 4 5.5-1 1-5.5-4L6 13H5V7.5C5 5.75 5.75 5 7.5 5zm11 2.5c0-1.75-.75-2.5-2.5-2.5H16v1l3 1.5-4 5.5 1 1 5.5-4 1.5 3h1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-shrink .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M18.5 16c-1.75 0-2.5.75-2.5 2.5V24h1l1.5-3 5.5 4 1-1-4-5.5 3-1.5v-1zM13 18.5c0-1.75-.75-2.5-2.5-2.5H5v1l3 1.5L4 24l1 1 5.5-4 1.5 3h1zm3-8c0 1.75.75 2.5 2.5 2.5H24v-1l-3-1.5L25 5l-1-1-5.5 4L17 5h-1zM10.5 13c1.75 0 2.5-.75 2.5-2.5V5h-1l-1.5 3L5 4 4 5l4 5.5L5 12v1z'/%3E%3C/svg%3E")}}.maplibregl-ctrl button.maplibregl-ctrl-compass .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='m10.5 14 4-8 4 8z'/%3E%3Cpath fill='%23ccc' d='m10.5 16 4 8 4-8z'/%3E%3C/svg%3E")}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-compass .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='m10.5 14 4-8 4 8z'/%3E%3Cpath fill='%23ccc' d='m10.5 16 4 8 4-8z'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-compass .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='m10.5 14 4-8 4 8z'/%3E%3Cpath fill='%23ccc' d='m10.5 16 4 8 4-8z'/%3E%3C/svg%3E")}}.maplibregl-ctrl button.maplibregl-ctrl-terrain .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='%23333' viewBox='0 0 22 22'%3E%3Cpath d='m1.754 13.406 4.453-4.851 3.09 3.09 3.281 3.277.969-.969-3.309-3.312 3.844-4.121 6.148 6.886h1.082v-.855l-7.207-8.07-4.84 5.187L6.169 6.57l-5.48 5.965v.871ZM.688 16.844h20.625v1.375H.688Zm0 0'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-terrain-enabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='%2333b5e5' viewBox='0 0 22 22'%3E%3Cpath d='m1.754 13.406 4.453-4.851 3.09 3.09 3.281 3.277.969-.969-3.309-3.312 3.844-4.121 6.148 6.886h1.082v-.855l-7.207-8.07-4.84 5.187L6.169 6.57l-5.48 5.965v.871ZM.688 16.844h20.625v1.375H.688Zm0 0'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate:disabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23aaa' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Cpath fill='red' d='m14 5 1 1-9 9-1-1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e58978' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e54e33' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-waiting .maplibregl-ctrl-icon{animation:maplibregl-spin 2s linear infinite}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-geolocate .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate:disabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23999' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Cpath fill='red' d='m14 5 1 1-9 9-1-1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e58978' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e54e33' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-geolocate .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate:disabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23666' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Cpath fill='red' d='m14 5 1 1-9 9-1-1z'/%3E%3C/svg%3E")}}@keyframes maplibregl-spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}a.maplibregl-ctrl-logo{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='23' fill='none'%3E%3Cpath fill='%23000' fill-opacity='.4' fill-rule='evenodd' d='M17.408 16.796h-1.827l2.501-12.095h.198l3.324 6.533.988 2.19.988-2.19 3.258-6.533h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.929 5.644h-.098l-2.914-5.644-.757-1.71-.345 1.71zm1.958-3.42-.726 3.663a1.255 1.255 0 0 1-1.232 1.011h-1.827a1.255 1.255 0 0 1-1.229-1.509l2.501-12.095a1.255 1.255 0 0 1 1.23-1.001h.197a1.25 1.25 0 0 1 1.12.685l3.19 6.273 3.125-6.263a1.25 1.25 0 0 1 1.123-.695h.181a1.255 1.255 0 0 1 1.227.991l1.443 6.71a5 5 0 0 1 .314-.787l.009-.016a4.6 4.6 0 0 1 1.777-1.887c.782-.46 1.668-.667 2.611-.667a4.6 4.6 0 0 1 1.7.32l.306.134c.21-.16.474-.256.759-.256h1.694a1.255 1.255 0 0 1 1.212.925 1.255 1.255 0 0 1 1.212-.925h1.711c.284 0 .545.094.755.252.613-.3 1.312-.45 2.075-.45 1.356 0 2.557.445 3.482 1.4q.47.48.763 1.064V4.701a1.255 1.255 0 0 1 1.255-1.255h1.86A1.255 1.255 0 0 1 54.44 4.7v9.194h2.217c.19 0 .37.043.532.118v-4.77c0-.356.147-.678.385-.906a2.42 2.42 0 0 1-.682-1.71c0-.665.267-1.253.735-1.7a2.45 2.45 0 0 1 1.722-.674 2.43 2.43 0 0 1 1.705.675q.318.302.504.683V4.7a1.255 1.255 0 0 1 1.255-1.255h1.744A1.255 1.255 0 0 1 65.812 4.7v3.335a4.8 4.8 0 0 1 1.526-.246c.938 0 1.817.214 2.59.69a4.47 4.47 0 0 1 1.67 1.743v-.98a1.255 1.255 0 0 1 1.256-1.256h1.777c.233 0 .451.064.639.174a3.4 3.4 0 0 1 1.567-.372c.346 0 .861.02 1.285.232a1.25 1.25 0 0 1 .689 1.004 4.7 4.7 0 0 1 .853-.588c.795-.44 1.675-.647 2.61-.647 1.385 0 2.65.39 3.525 1.396.836.938 1.168 2.173 1.168 3.528q-.001.515-.056 1.051a1.255 1.255 0 0 1-.947 1.09l.408.952a1.255 1.255 0 0 1-.477 1.552c-.418.268-.92.463-1.458.612-.613.171-1.304.244-2.049.244-1.06 0-2.043-.207-2.886-.698l-.015-.008c-.798-.48-1.419-1.135-1.818-1.963l-.004-.008a5.8 5.8 0 0 1-.548-2.512q0-.429.053-.843a1.3 1.3 0 0 1-.333-.086l-.166-.004c-.223 0-.426.062-.643.228-.03.024-.142.139-.142.59v3.883a1.255 1.255 0 0 1-1.256 1.256h-1.777a1.255 1.255 0 0 1-1.256-1.256V15.69l-.032.057a4.8 4.8 0 0 1-1.86 1.833 5.04 5.04 0 0 1-2.484.634 4.5 4.5 0 0 1-1.935-.424 1.25 1.25 0 0 1-.764.258h-1.71a1.255 1.255 0 0 1-1.256-1.255V7.687a2.4 2.4 0 0 1-.428.625c.253.23.412.561.412.93v7.553a1.255 1.255 0 0 1-1.256 1.255h-1.843a1.25 1.25 0 0 1-.894-.373c-.228.23-.544.373-.894.373H51.32a1.255 1.255 0 0 1-1.256-1.255v-1.251l-.061.117a4.7 4.7 0 0 1-1.782 1.884 4.77 4.77 0 0 1-2.485.67 5.6 5.6 0 0 1-1.485-.188l.009 2.764a1.255 1.255 0 0 1-1.255 1.259h-1.729a1.255 1.255 0 0 1-1.255-1.255v-3.537a1.255 1.255 0 0 1-1.167.793h-1.679a1.25 1.25 0 0 1-.77-.263 4.5 4.5 0 0 1-1.945.429c-.885 0-1.724-.21-2.495-.632l-.017-.01a5 5 0 0 1-1.081-.836 1.255 1.255 0 0 1-1.254 1.312h-1.81a1.255 1.255 0 0 1-1.228-.99l-.782-3.625-2.044 3.939a1.25 1.25 0 0 1-1.115.676h-.098a1.25 1.25 0 0 1-1.116-.68l-2.061-3.994zM35.92 16.63l.207-.114.223-.15q.493-.356.735-.785l.061-.118.033 1.332h1.678V9.242h-1.694l-.033 1.267q-.133-.329-.526-.658l-.032-.028a3.2 3.2 0 0 0-.668-.428l-.27-.12a3.3 3.3 0 0 0-1.235-.23q-1.136-.001-1.974.493a3.36 3.36 0 0 0-1.3 1.382q-.445.89-.444 2.074 0 1.2.51 2.107a3.8 3.8 0 0 0 1.382 1.381 3.9 3.9 0 0 0 1.893.477q.795 0 1.455-.33zm-2.789-5.38q-.576.675-.575 1.762 0 1.102.559 1.794.576.675 1.645.675a2.25 2.25 0 0 0 .934-.19 2.2 2.2 0 0 0 .468-.29l.178-.161a2.2 2.2 0 0 0 .397-.561q.244-.5.244-1.15v-.115q0-.708-.296-1.267l-.043-.077a2.2 2.2 0 0 0-.633-.709l-.13-.086-.047-.028a2.1 2.1 0 0 0-1.073-.285q-1.052 0-1.629.692zm2.316 2.706c.163-.17.28-.407.28-.83v-.114c0-.292-.06-.508-.15-.68a.96.96 0 0 0-.353-.389.85.85 0 0 0-.464-.127c-.4 0-.56.114-.664.239l-.01.012c-.148.174-.275.45-.275.945 0 .506.122.801.27.99.097.11.266.224.68.224.303 0 .504-.09.687-.269zm7.545 1.705a2.6 2.6 0 0 0 .331.423q.319.33.755.548l.173.074q.65.255 1.49.255 1.02 0 1.844-.493a3.45 3.45 0 0 0 1.316-1.4q.493-.904.493-2.089 0-1.909-.988-2.913-.988-1.02-2.584-1.02-.898 0-1.575.347a3 3 0 0 0-.415.262l-.199.166a3.4 3.4 0 0 0-.64.82V9.242h-1.712v11.553h1.729l-.017-5.134zm.53-1.138q.206.29.48.5l.155.11.053.034q.51.296 1.119.297 1.07 0 1.645-.675.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.435 0-.835.16a2 2 0 0 0-.284.136 2 2 0 0 0-.363.254 2.2 2.2 0 0 0-.46.569l-.082.162a2.6 2.6 0 0 0-.213 1.072v.115q0 .707.296 1.267l.135.211zm.964-.818a1.1 1.1 0 0 0 .367.385.94.94 0 0 0 .476.118c.423 0 .59-.117.687-.23.159-.194.28-.478.28-.95 0-.53-.133-.8-.266-.952l-.021-.025c-.078-.094-.231-.221-.68-.221a1 1 0 0 0-.503.135l-.012.007a.86.86 0 0 0-.335.343c-.073.133-.132.324-.132.614v.115a1.4 1.4 0 0 0 .14.66zm15.7-6.222q.347-.346.346-.856a1.05 1.05 0 0 0-.345-.79 1.18 1.18 0 0 0-.84-.329q-.51 0-.855.33a1.05 1.05 0 0 0-.346.79q0 .51.346.855.345.346.856.346.51 0 .839-.346zm4.337 9.314.033-1.332q.191.403.59.747l.098.081a4 4 0 0 0 .316.224l.223.122a3.2 3.2 0 0 0 1.44.322 3.8 3.8 0 0 0 1.875-.477 3.5 3.5 0 0 0 1.382-1.366q.527-.89.526-2.09 0-1.184-.444-2.073a3.24 3.24 0 0 0-1.283-1.399q-.823-.51-1.942-.51a3.5 3.5 0 0 0-1.527.344l-.086.043-.165.09a3 3 0 0 0-.33.214q-.432.315-.656.707a2 2 0 0 0-.099.198l.082-1.283V4.701h-1.744v12.095zm.473-2.509a2.5 2.5 0 0 0 .566.7q.117.098.245.18l.144.08a2.1 2.1 0 0 0 .975.232q1.07 0 1.645-.675.576-.69.576-1.778 0-1.102-.576-1.777-.56-.691-1.645-.692a2.2 2.2 0 0 0-1.015.235q-.22.113-.415.282l-.15.142a2.1 2.1 0 0 0-.42.594q-.223.479-.223 1.1v.115q0 .705.293 1.26zm2.616-.293c.157-.191.28-.479.28-.967 0-.51-.13-.79-.276-.961l-.021-.026c-.082-.1-.232-.225-.67-.225a.87.87 0 0 0-.681.279l-.012.011c-.154.155-.274.38-.274.807v.115c0 .285.057.499.144.669a1.1 1.1 0 0 0 .367.405c.137.082.28.123.455.123.423 0 .59-.118.686-.23zm8.266-3.013q.345-.13.724-.14l.069-.002q.493 0 .642.099l.247-1.794q-.196-.099-.717-.099a2.3 2.3 0 0 0-.545.063 2 2 0 0 0-.411.148 2.2 2.2 0 0 0-.4.249 2.5 2.5 0 0 0-.485.499 2.7 2.7 0 0 0-.32.581l-.05.137v-1.48h-1.778v7.553h1.777v-3.884q0-.546.159-.943a1.5 1.5 0 0 1 .466-.636 2.5 2.5 0 0 1 .399-.253 2 2 0 0 1 .224-.099zm9.784 2.656.05-.922q0-1.743-.856-2.698-.838-.97-2.584-.97-1.119-.001-2.007.493a3.46 3.46 0 0 0-1.4 1.382q-.493.906-.493 2.106 0 1.07.428 1.975.428.89 1.332 1.432.906.526 2.255.526.973 0 1.668-.185l.044-.012.135-.04q.613-.184.984-.421l-.542-1.267q-.3.162-.642.274l-.297.087q-.51.131-1.3.131-.954 0-1.497-.444a1.6 1.6 0 0 1-.192-.193q-.366-.44-.512-1.234l-.004-.021zm-5.427-1.256-.003.022h3.752v-.138q-.011-.727-.288-1.118a1 1 0 0 0-.156-.176q-.46-.428-1.316-.428-.986 0-1.494.604-.379.45-.494 1.234zm-27.053 2.77V4.7h-1.86v12.095h5.333V15.15zm7.103-5.908v7.553h-1.843V9.242h1.843z'/%3E%3Cpath fill='%23fff' d='m19.63 11.151-.757-1.71-.345 1.71-1.12 5.644h-1.827L18.083 4.7h.197l3.325 6.533.988 2.19.988-2.19L26.839 4.7h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.93 5.644h-.098l-2.913-5.644zm14.836 5.81q-1.02 0-1.893-.478a3.8 3.8 0 0 1-1.381-1.382q-.51-.906-.51-2.106 0-1.185.444-2.074a3.36 3.36 0 0 1 1.3-1.382q.839-.494 1.974-.494a3.3 3.3 0 0 1 1.234.231 3.3 3.3 0 0 1 .97.575q.396.33.527.659l.033-1.267h1.694v7.553H37.18l-.033-1.332q-.279.593-1.02 1.053a3.17 3.17 0 0 1-1.662.444zm.296-1.482q.938 0 1.58-.642.642-.66.642-1.711v-.115q0-.708-.296-1.267a2.2 2.2 0 0 0-.807-.872 2.1 2.1 0 0 0-1.119-.313q-1.053 0-1.629.692-.575.675-.575 1.76 0 1.103.559 1.795.577.675 1.645.675zm6.521-6.237h1.711v1.4q.906-1.597 2.83-1.597 1.596 0 2.584 1.02.988 1.005.988 2.914 0 1.185-.493 2.09a3.46 3.46 0 0 1-1.316 1.399 3.5 3.5 0 0 1-1.844.493q-.954 0-1.662-.329a2.67 2.67 0 0 1-1.086-.97l.017 5.134h-1.728zm4.048 6.22q1.07 0 1.645-.674.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.592 0-1.12.296-.51.28-.822.823-.296.527-.296 1.234v.115q0 .708.296 1.267.313.543.823.855.51.296 1.119.297z'/%3E%3Cpath fill='%23e1e3e9' d='M51.325 4.7h1.86v10.45h3.473v1.646h-5.333zm7.12 4.542h1.843v7.553h-1.843zm.905-1.415a1.16 1.16 0 0 1-.856-.346 1.17 1.17 0 0 1-.346-.856 1.05 1.05 0 0 1 .346-.79q.346-.329.856-.329.494 0 .839.33a1.05 1.05 0 0 1 .345.79 1.16 1.16 0 0 1-.345.855q-.33.346-.84.346zm7.875 9.133a3.17 3.17 0 0 1-1.662-.444q-.723-.46-1.004-1.053l-.033 1.332h-1.71V4.701h1.743v4.657l-.082 1.283q.279-.658 1.086-1.119a3.5 3.5 0 0 1 1.778-.477q1.119 0 1.942.51a3.24 3.24 0 0 1 1.283 1.4q.445.888.444 2.072 0 1.201-.526 2.09a3.5 3.5 0 0 1-1.382 1.366 3.8 3.8 0 0 1-1.876.477zm-.296-1.481q1.069 0 1.645-.675.577-.69.577-1.778 0-1.102-.577-1.776-.56-.691-1.645-.692a2.12 2.12 0 0 0-1.58.659q-.642.641-.642 1.694v.115q0 .71.296 1.267a2.4 2.4 0 0 0 .807.872 2.1 2.1 0 0 0 1.119.313zm5.927-6.237h1.777v1.481q.263-.757.856-1.217a2.14 2.14 0 0 1 1.349-.46q.527 0 .724.098l-.247 1.794q-.149-.099-.642-.099-.774 0-1.416.494-.626.493-.626 1.58v3.883h-1.777V9.242zm9.534 7.718q-1.35 0-2.255-.526-.904-.543-1.332-1.432a4.6 4.6 0 0 1-.428-1.975q0-1.2.493-2.106a3.46 3.46 0 0 1 1.4-1.382q.889-.495 2.007-.494 1.744 0 2.584.97.855.956.856 2.7 0 .444-.05.92h-5.43q.18 1.005.708 1.45.542.443 1.497.443.79 0 1.3-.131a4 4 0 0 0 .938-.362l.542 1.267q-.411.263-1.119.46-.708.198-1.711.197zm1.596-4.558q.016-1.02-.444-1.432-.46-.428-1.316-.428-1.728 0-1.991 1.86z'/%3E%3Cpath d='M5.074 15.948a.484.657 0 0 0-.486.659v1.84a.484.657 0 0 0 .486.659h4.101a.484.657 0 0 0 .486-.659v-1.84a.484.657 0 0 0-.486-.659zm3.56 1.16H5.617v.838h3.017z' style='fill:%23fff;fill-rule:evenodd;stroke-width:1.03600001'/%3E%3Cg style='stroke-width:1.12603545'%3E%3Cpath d='M-9.408-1.416c-3.833-.025-7.056 2.912-7.08 6.615-.02 3.08 1.653 4.832 3.107 6.268.903.892 1.721 1.74 2.32 2.902l-.525-.004c-.543-.003-.992.304-1.24.639a1.87 1.87 0 0 0-.362 1.121l-.011 1.877c-.003.402.104.787.347 1.125.244.338.688.653 1.23.656l4.142.028c.542.003.99-.306 1.238-.641a1.87 1.87 0 0 0 .363-1.121l.012-1.875a1.87 1.87 0 0 0-.348-1.127c-.243-.338-.688-.653-1.23-.656l-.518-.004c.597-1.145 1.425-1.983 2.348-2.87 1.473-1.414 3.18-3.149 3.2-6.226-.016-3.59-2.923-6.684-6.993-6.707m-.006 1.1v.002c3.274.02 5.92 2.532 5.9 5.6-.017 2.706-1.39 4.026-2.863 5.44-1.034.994-2.118 2.033-2.814 3.633-.018.041-.052.055-.075.065q-.013.004-.02.01a.34.34 0 0 1-.226.084.34.34 0 0 1-.224-.086l-.092-.077c-.699-1.615-1.768-2.669-2.781-3.67-1.454-1.435-2.797-2.762-2.78-5.478.02-3.067 2.7-5.545 5.975-5.523m-.02 2.826c-1.62-.01-2.944 1.315-2.955 2.96-.01 1.646 1.295 2.988 2.916 2.999h.002c1.621.01 2.943-1.316 2.953-2.961.011-1.646-1.294-2.988-2.916-2.998m-.005 1.1c1.017.006 1.829.83 1.822 1.89s-.83 1.874-1.848 1.867c-1.018-.006-1.829-.83-1.822-1.89s.83-1.874 1.848-1.868m-2.155 11.857 4.14.025c.271.002.49.305.487.676l-.013 1.875c-.003.37-.224.67-.495.668l-4.14-.025c-.27-.002-.487-.306-.485-.676l.012-1.875c.003-.37.224-.67.494-.668' style='color:%23000;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:%23000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:evenodd;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:%23000;solid-opacity:1;vector-effect:none;fill:%23000;fill-opacity:.4;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-9.415-.316C-12.69-.338-15.37 2.14-15.39 5.207c-.017 2.716 1.326 4.041 2.78 5.477 1.013 1 2.081 2.055 2.78 3.67l.092.076a.34.34 0 0 0 .225.086.34.34 0 0 0 .227-.083l.019-.01c.022-.009.057-.024.074-.064.697-1.6 1.78-2.64 2.814-3.634 1.473-1.414 2.847-2.733 2.864-5.44.02-3.067-2.627-5.58-5.901-5.601m-.057 8.784c1.621.011 2.944-1.315 2.955-2.96.01-1.646-1.295-2.988-2.916-2.999-1.622-.01-2.945 1.315-2.955 2.96s1.295 2.989 2.916 3' style='clip-rule:evenodd;fill:%23e1e3e9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-11.594 15.465c-.27-.002-.492.297-.494.668l-.012 1.876c-.003.371.214.673.485.675l4.14.027c.271.002.492-.298.495-.668l.012-1.877c.003-.37-.215-.672-.485-.674z' style='clip-rule:evenodd;fill:%23fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3C/g%3E%3C/svg%3E");background-repeat:no-repeat;cursor:pointer;display:block;height:23px;margin:0 0 -4px -4px;overflow:hidden;width:88px}a.maplibregl-ctrl-logo.maplibregl-compact{width:14px}@media (forced-colors:active){a.maplibregl-ctrl-logo{background-color:transparent;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='23' fill='none'%3E%3Cpath fill='%23000' fill-opacity='.4' fill-rule='evenodd' d='M17.408 16.796h-1.827l2.501-12.095h.198l3.324 6.533.988 2.19.988-2.19 3.258-6.533h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.929 5.644h-.098l-2.914-5.644-.757-1.71-.345 1.71zm1.958-3.42-.726 3.663a1.255 1.255 0 0 1-1.232 1.011h-1.827a1.255 1.255 0 0 1-1.229-1.509l2.501-12.095a1.255 1.255 0 0 1 1.23-1.001h.197a1.25 1.25 0 0 1 1.12.685l3.19 6.273 3.125-6.263a1.25 1.25 0 0 1 1.123-.695h.181a1.255 1.255 0 0 1 1.227.991l1.443 6.71a5 5 0 0 1 .314-.787l.009-.016a4.6 4.6 0 0 1 1.777-1.887c.782-.46 1.668-.667 2.611-.667a4.6 4.6 0 0 1 1.7.32l.306.134c.21-.16.474-.256.759-.256h1.694a1.255 1.255 0 0 1 1.212.925 1.255 1.255 0 0 1 1.212-.925h1.711c.284 0 .545.094.755.252.613-.3 1.312-.45 2.075-.45 1.356 0 2.557.445 3.482 1.4q.47.48.763 1.064V4.701a1.255 1.255 0 0 1 1.255-1.255h1.86A1.255 1.255 0 0 1 54.44 4.7v9.194h2.217c.19 0 .37.043.532.118v-4.77c0-.356.147-.678.385-.906a2.42 2.42 0 0 1-.682-1.71c0-.665.267-1.253.735-1.7a2.45 2.45 0 0 1 1.722-.674 2.43 2.43 0 0 1 1.705.675q.318.302.504.683V4.7a1.255 1.255 0 0 1 1.255-1.255h1.744A1.255 1.255 0 0 1 65.812 4.7v3.335a4.8 4.8 0 0 1 1.526-.246c.938 0 1.817.214 2.59.69a4.47 4.47 0 0 1 1.67 1.743v-.98a1.255 1.255 0 0 1 1.256-1.256h1.777c.233 0 .451.064.639.174a3.4 3.4 0 0 1 1.567-.372c.346 0 .861.02 1.285.232a1.25 1.25 0 0 1 .689 1.004 4.7 4.7 0 0 1 .853-.588c.795-.44 1.675-.647 2.61-.647 1.385 0 2.65.39 3.525 1.396.836.938 1.168 2.173 1.168 3.528q-.001.515-.056 1.051a1.255 1.255 0 0 1-.947 1.09l.408.952a1.255 1.255 0 0 1-.477 1.552c-.418.268-.92.463-1.458.612-.613.171-1.304.244-2.049.244-1.06 0-2.043-.207-2.886-.698l-.015-.008c-.798-.48-1.419-1.135-1.818-1.963l-.004-.008a5.8 5.8 0 0 1-.548-2.512q0-.429.053-.843a1.3 1.3 0 0 1-.333-.086l-.166-.004c-.223 0-.426.062-.643.228-.03.024-.142.139-.142.59v3.883a1.255 1.255 0 0 1-1.256 1.256h-1.777a1.255 1.255 0 0 1-1.256-1.256V15.69l-.032.057a4.8 4.8 0 0 1-1.86 1.833 5.04 5.04 0 0 1-2.484.634 4.5 4.5 0 0 1-1.935-.424 1.25 1.25 0 0 1-.764.258h-1.71a1.255 1.255 0 0 1-1.256-1.255V7.687a2.4 2.4 0 0 1-.428.625c.253.23.412.561.412.93v7.553a1.255 1.255 0 0 1-1.256 1.255h-1.843a1.25 1.25 0 0 1-.894-.373c-.228.23-.544.373-.894.373H51.32a1.255 1.255 0 0 1-1.256-1.255v-1.251l-.061.117a4.7 4.7 0 0 1-1.782 1.884 4.77 4.77 0 0 1-2.485.67 5.6 5.6 0 0 1-1.485-.188l.009 2.764a1.255 1.255 0 0 1-1.255 1.259h-1.729a1.255 1.255 0 0 1-1.255-1.255v-3.537a1.255 1.255 0 0 1-1.167.793h-1.679a1.25 1.25 0 0 1-.77-.263 4.5 4.5 0 0 1-1.945.429c-.885 0-1.724-.21-2.495-.632l-.017-.01a5 5 0 0 1-1.081-.836 1.255 1.255 0 0 1-1.254 1.312h-1.81a1.255 1.255 0 0 1-1.228-.99l-.782-3.625-2.044 3.939a1.25 1.25 0 0 1-1.115.676h-.098a1.25 1.25 0 0 1-1.116-.68l-2.061-3.994zM35.92 16.63l.207-.114.223-.15q.493-.356.735-.785l.061-.118.033 1.332h1.678V9.242h-1.694l-.033 1.267q-.133-.329-.526-.658l-.032-.028a3.2 3.2 0 0 0-.668-.428l-.27-.12a3.3 3.3 0 0 0-1.235-.23q-1.136-.001-1.974.493a3.36 3.36 0 0 0-1.3 1.382q-.445.89-.444 2.074 0 1.2.51 2.107a3.8 3.8 0 0 0 1.382 1.381 3.9 3.9 0 0 0 1.893.477q.795 0 1.455-.33zm-2.789-5.38q-.576.675-.575 1.762 0 1.102.559 1.794.576.675 1.645.675a2.25 2.25 0 0 0 .934-.19 2.2 2.2 0 0 0 .468-.29l.178-.161a2.2 2.2 0 0 0 .397-.561q.244-.5.244-1.15v-.115q0-.708-.296-1.267l-.043-.077a2.2 2.2 0 0 0-.633-.709l-.13-.086-.047-.028a2.1 2.1 0 0 0-1.073-.285q-1.052 0-1.629.692zm2.316 2.706c.163-.17.28-.407.28-.83v-.114c0-.292-.06-.508-.15-.68a.96.96 0 0 0-.353-.389.85.85 0 0 0-.464-.127c-.4 0-.56.114-.664.239l-.01.012c-.148.174-.275.45-.275.945 0 .506.122.801.27.99.097.11.266.224.68.224.303 0 .504-.09.687-.269zm7.545 1.705a2.6 2.6 0 0 0 .331.423q.319.33.755.548l.173.074q.65.255 1.49.255 1.02 0 1.844-.493a3.45 3.45 0 0 0 1.316-1.4q.493-.904.493-2.089 0-1.909-.988-2.913-.988-1.02-2.584-1.02-.898 0-1.575.347a3 3 0 0 0-.415.262l-.199.166a3.4 3.4 0 0 0-.64.82V9.242h-1.712v11.553h1.729l-.017-5.134zm.53-1.138q.206.29.48.5l.155.11.053.034q.51.296 1.119.297 1.07 0 1.645-.675.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.435 0-.835.16a2 2 0 0 0-.284.136 2 2 0 0 0-.363.254 2.2 2.2 0 0 0-.46.569l-.082.162a2.6 2.6 0 0 0-.213 1.072v.115q0 .707.296 1.267l.135.211zm.964-.818a1.1 1.1 0 0 0 .367.385.94.94 0 0 0 .476.118c.423 0 .59-.117.687-.23.159-.194.28-.478.28-.95 0-.53-.133-.8-.266-.952l-.021-.025c-.078-.094-.231-.221-.68-.221a1 1 0 0 0-.503.135l-.012.007a.86.86 0 0 0-.335.343c-.073.133-.132.324-.132.614v.115a1.4 1.4 0 0 0 .14.66zm15.7-6.222q.347-.346.346-.856a1.05 1.05 0 0 0-.345-.79 1.18 1.18 0 0 0-.84-.329q-.51 0-.855.33a1.05 1.05 0 0 0-.346.79q0 .51.346.855.345.346.856.346.51 0 .839-.346zm4.337 9.314.033-1.332q.191.403.59.747l.098.081a4 4 0 0 0 .316.224l.223.122a3.2 3.2 0 0 0 1.44.322 3.8 3.8 0 0 0 1.875-.477 3.5 3.5 0 0 0 1.382-1.366q.527-.89.526-2.09 0-1.184-.444-2.073a3.24 3.24 0 0 0-1.283-1.399q-.823-.51-1.942-.51a3.5 3.5 0 0 0-1.527.344l-.086.043-.165.09a3 3 0 0 0-.33.214q-.432.315-.656.707a2 2 0 0 0-.099.198l.082-1.283V4.701h-1.744v12.095zm.473-2.509a2.5 2.5 0 0 0 .566.7q.117.098.245.18l.144.08a2.1 2.1 0 0 0 .975.232q1.07 0 1.645-.675.576-.69.576-1.778 0-1.102-.576-1.777-.56-.691-1.645-.692a2.2 2.2 0 0 0-1.015.235q-.22.113-.415.282l-.15.142a2.1 2.1 0 0 0-.42.594q-.223.479-.223 1.1v.115q0 .705.293 1.26zm2.616-.293c.157-.191.28-.479.28-.967 0-.51-.13-.79-.276-.961l-.021-.026c-.082-.1-.232-.225-.67-.225a.87.87 0 0 0-.681.279l-.012.011c-.154.155-.274.38-.274.807v.115c0 .285.057.499.144.669a1.1 1.1 0 0 0 .367.405c.137.082.28.123.455.123.423 0 .59-.118.686-.23zm8.266-3.013q.345-.13.724-.14l.069-.002q.493 0 .642.099l.247-1.794q-.196-.099-.717-.099a2.3 2.3 0 0 0-.545.063 2 2 0 0 0-.411.148 2.2 2.2 0 0 0-.4.249 2.5 2.5 0 0 0-.485.499 2.7 2.7 0 0 0-.32.581l-.05.137v-1.48h-1.778v7.553h1.777v-3.884q0-.546.159-.943a1.5 1.5 0 0 1 .466-.636 2.5 2.5 0 0 1 .399-.253 2 2 0 0 1 .224-.099zm9.784 2.656.05-.922q0-1.743-.856-2.698-.838-.97-2.584-.97-1.119-.001-2.007.493a3.46 3.46 0 0 0-1.4 1.382q-.493.906-.493 2.106 0 1.07.428 1.975.428.89 1.332 1.432.906.526 2.255.526.973 0 1.668-.185l.044-.012.135-.04q.613-.184.984-.421l-.542-1.267q-.3.162-.642.274l-.297.087q-.51.131-1.3.131-.954 0-1.497-.444a1.6 1.6 0 0 1-.192-.193q-.366-.44-.512-1.234l-.004-.021zm-5.427-1.256-.003.022h3.752v-.138q-.011-.727-.288-1.118a1 1 0 0 0-.156-.176q-.46-.428-1.316-.428-.986 0-1.494.604-.379.45-.494 1.234zm-27.053 2.77V4.7h-1.86v12.095h5.333V15.15zm7.103-5.908v7.553h-1.843V9.242h1.843z'/%3E%3Cpath fill='%23fff' d='m19.63 11.151-.757-1.71-.345 1.71-1.12 5.644h-1.827L18.083 4.7h.197l3.325 6.533.988 2.19.988-2.19L26.839 4.7h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.93 5.644h-.098l-2.913-5.644zm14.836 5.81q-1.02 0-1.893-.478a3.8 3.8 0 0 1-1.381-1.382q-.51-.906-.51-2.106 0-1.185.444-2.074a3.36 3.36 0 0 1 1.3-1.382q.839-.494 1.974-.494a3.3 3.3 0 0 1 1.234.231 3.3 3.3 0 0 1 .97.575q.396.33.527.659l.033-1.267h1.694v7.553H37.18l-.033-1.332q-.279.593-1.02 1.053a3.17 3.17 0 0 1-1.662.444zm.296-1.482q.938 0 1.58-.642.642-.66.642-1.711v-.115q0-.708-.296-1.267a2.2 2.2 0 0 0-.807-.872 2.1 2.1 0 0 0-1.119-.313q-1.053 0-1.629.692-.575.675-.575 1.76 0 1.103.559 1.795.577.675 1.645.675zm6.521-6.237h1.711v1.4q.906-1.597 2.83-1.597 1.596 0 2.584 1.02.988 1.005.988 2.914 0 1.185-.493 2.09a3.46 3.46 0 0 1-1.316 1.399 3.5 3.5 0 0 1-1.844.493q-.954 0-1.662-.329a2.67 2.67 0 0 1-1.086-.97l.017 5.134h-1.728zm4.048 6.22q1.07 0 1.645-.674.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.592 0-1.12.296-.51.28-.822.823-.296.527-.296 1.234v.115q0 .708.296 1.267.313.543.823.855.51.296 1.119.297z'/%3E%3Cpath fill='%23e1e3e9' d='M51.325 4.7h1.86v10.45h3.473v1.646h-5.333zm7.12 4.542h1.843v7.553h-1.843zm.905-1.415a1.16 1.16 0 0 1-.856-.346 1.17 1.17 0 0 1-.346-.856 1.05 1.05 0 0 1 .346-.79q.346-.329.856-.329.494 0 .839.33a1.05 1.05 0 0 1 .345.79 1.16 1.16 0 0 1-.345.855q-.33.346-.84.346zm7.875 9.133a3.17 3.17 0 0 1-1.662-.444q-.723-.46-1.004-1.053l-.033 1.332h-1.71V4.701h1.743v4.657l-.082 1.283q.279-.658 1.086-1.119a3.5 3.5 0 0 1 1.778-.477q1.119 0 1.942.51a3.24 3.24 0 0 1 1.283 1.4q.445.888.444 2.072 0 1.201-.526 2.09a3.5 3.5 0 0 1-1.382 1.366 3.8 3.8 0 0 1-1.876.477zm-.296-1.481q1.069 0 1.645-.675.577-.69.577-1.778 0-1.102-.577-1.776-.56-.691-1.645-.692a2.12 2.12 0 0 0-1.58.659q-.642.641-.642 1.694v.115q0 .71.296 1.267a2.4 2.4 0 0 0 .807.872 2.1 2.1 0 0 0 1.119.313zm5.927-6.237h1.777v1.481q.263-.757.856-1.217a2.14 2.14 0 0 1 1.349-.46q.527 0 .724.098l-.247 1.794q-.149-.099-.642-.099-.774 0-1.416.494-.626.493-.626 1.58v3.883h-1.777V9.242zm9.534 7.718q-1.35 0-2.255-.526-.904-.543-1.332-1.432a4.6 4.6 0 0 1-.428-1.975q0-1.2.493-2.106a3.46 3.46 0 0 1 1.4-1.382q.889-.495 2.007-.494 1.744 0 2.584.97.855.956.856 2.7 0 .444-.05.92h-5.43q.18 1.005.708 1.45.542.443 1.497.443.79 0 1.3-.131a4 4 0 0 0 .938-.362l.542 1.267q-.411.263-1.119.46-.708.198-1.711.197zm1.596-4.558q.016-1.02-.444-1.432-.46-.428-1.316-.428-1.728 0-1.991 1.86z'/%3E%3Cpath d='M5.074 15.948a.484.657 0 0 0-.486.659v1.84a.484.657 0 0 0 .486.659h4.101a.484.657 0 0 0 .486-.659v-1.84a.484.657 0 0 0-.486-.659zm3.56 1.16H5.617v.838h3.017z' style='fill:%23fff;fill-rule:evenodd;stroke-width:1.03600001'/%3E%3Cg style='stroke-width:1.12603545'%3E%3Cpath d='M-9.408-1.416c-3.833-.025-7.056 2.912-7.08 6.615-.02 3.08 1.653 4.832 3.107 6.268.903.892 1.721 1.74 2.32 2.902l-.525-.004c-.543-.003-.992.304-1.24.639a1.87 1.87 0 0 0-.362 1.121l-.011 1.877c-.003.402.104.787.347 1.125.244.338.688.653 1.23.656l4.142.028c.542.003.99-.306 1.238-.641a1.87 1.87 0 0 0 .363-1.121l.012-1.875a1.87 1.87 0 0 0-.348-1.127c-.243-.338-.688-.653-1.23-.656l-.518-.004c.597-1.145 1.425-1.983 2.348-2.87 1.473-1.414 3.18-3.149 3.2-6.226-.016-3.59-2.923-6.684-6.993-6.707m-.006 1.1v.002c3.274.02 5.92 2.532 5.9 5.6-.017 2.706-1.39 4.026-2.863 5.44-1.034.994-2.118 2.033-2.814 3.633-.018.041-.052.055-.075.065q-.013.004-.02.01a.34.34 0 0 1-.226.084.34.34 0 0 1-.224-.086l-.092-.077c-.699-1.615-1.768-2.669-2.781-3.67-1.454-1.435-2.797-2.762-2.78-5.478.02-3.067 2.7-5.545 5.975-5.523m-.02 2.826c-1.62-.01-2.944 1.315-2.955 2.96-.01 1.646 1.295 2.988 2.916 2.999h.002c1.621.01 2.943-1.316 2.953-2.961.011-1.646-1.294-2.988-2.916-2.998m-.005 1.1c1.017.006 1.829.83 1.822 1.89s-.83 1.874-1.848 1.867c-1.018-.006-1.829-.83-1.822-1.89s.83-1.874 1.848-1.868m-2.155 11.857 4.14.025c.271.002.49.305.487.676l-.013 1.875c-.003.37-.224.67-.495.668l-4.14-.025c-.27-.002-.487-.306-.485-.676l.012-1.875c.003-.37.224-.67.494-.668' style='color:%23000;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:%23000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:evenodd;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:%23000;solid-opacity:1;vector-effect:none;fill:%23000;fill-opacity:.4;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-9.415-.316C-12.69-.338-15.37 2.14-15.39 5.207c-.017 2.716 1.326 4.041 2.78 5.477 1.013 1 2.081 2.055 2.78 3.67l.092.076a.34.34 0 0 0 .225.086.34.34 0 0 0 .227-.083l.019-.01c.022-.009.057-.024.074-.064.697-1.6 1.78-2.64 2.814-3.634 1.473-1.414 2.847-2.733 2.864-5.44.02-3.067-2.627-5.58-5.901-5.601m-.057 8.784c1.621.011 2.944-1.315 2.955-2.96.01-1.646-1.295-2.988-2.916-2.999-1.622-.01-2.945 1.315-2.955 2.96s1.295 2.989 2.916 3' style='clip-rule:evenodd;fill:%23e1e3e9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-11.594 15.465c-.27-.002-.492.297-.494.668l-.012 1.876c-.003.371.214.673.485.675l4.14.027c.271.002.492-.298.495-.668l.012-1.877c.003-.37-.215-.672-.485-.674z' style='clip-rule:evenodd;fill:%23fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3C/g%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){a.maplibregl-ctrl-logo{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='23' fill='none'%3E%3Cpath fill='%23000' fill-opacity='.4' fill-rule='evenodd' d='M17.408 16.796h-1.827l2.501-12.095h.198l3.324 6.533.988 2.19.988-2.19 3.258-6.533h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.929 5.644h-.098l-2.914-5.644-.757-1.71-.345 1.71zm1.958-3.42-.726 3.663a1.255 1.255 0 0 1-1.232 1.011h-1.827a1.255 1.255 0 0 1-1.229-1.509l2.501-12.095a1.255 1.255 0 0 1 1.23-1.001h.197a1.25 1.25 0 0 1 1.12.685l3.19 6.273 3.125-6.263a1.25 1.25 0 0 1 1.123-.695h.181a1.255 1.255 0 0 1 1.227.991l1.443 6.71a5 5 0 0 1 .314-.787l.009-.016a4.6 4.6 0 0 1 1.777-1.887c.782-.46 1.668-.667 2.611-.667a4.6 4.6 0 0 1 1.7.32l.306.134c.21-.16.474-.256.759-.256h1.694a1.255 1.255 0 0 1 1.212.925 1.255 1.255 0 0 1 1.212-.925h1.711c.284 0 .545.094.755.252.613-.3 1.312-.45 2.075-.45 1.356 0 2.557.445 3.482 1.4q.47.48.763 1.064V4.701a1.255 1.255 0 0 1 1.255-1.255h1.86A1.255 1.255 0 0 1 54.44 4.7v9.194h2.217c.19 0 .37.043.532.118v-4.77c0-.356.147-.678.385-.906a2.42 2.42 0 0 1-.682-1.71c0-.665.267-1.253.735-1.7a2.45 2.45 0 0 1 1.722-.674 2.43 2.43 0 0 1 1.705.675q.318.302.504.683V4.7a1.255 1.255 0 0 1 1.255-1.255h1.744A1.255 1.255 0 0 1 65.812 4.7v3.335a4.8 4.8 0 0 1 1.526-.246c.938 0 1.817.214 2.59.69a4.47 4.47 0 0 1 1.67 1.743v-.98a1.255 1.255 0 0 1 1.256-1.256h1.777c.233 0 .451.064.639.174a3.4 3.4 0 0 1 1.567-.372c.346 0 .861.02 1.285.232a1.25 1.25 0 0 1 .689 1.004 4.7 4.7 0 0 1 .853-.588c.795-.44 1.675-.647 2.61-.647 1.385 0 2.65.39 3.525 1.396.836.938 1.168 2.173 1.168 3.528q-.001.515-.056 1.051a1.255 1.255 0 0 1-.947 1.09l.408.952a1.255 1.255 0 0 1-.477 1.552c-.418.268-.92.463-1.458.612-.613.171-1.304.244-2.049.244-1.06 0-2.043-.207-2.886-.698l-.015-.008c-.798-.48-1.419-1.135-1.818-1.963l-.004-.008a5.8 5.8 0 0 1-.548-2.512q0-.429.053-.843a1.3 1.3 0 0 1-.333-.086l-.166-.004c-.223 0-.426.062-.643.228-.03.024-.142.139-.142.59v3.883a1.255 1.255 0 0 1-1.256 1.256h-1.777a1.255 1.255 0 0 1-1.256-1.256V15.69l-.032.057a4.8 4.8 0 0 1-1.86 1.833 5.04 5.04 0 0 1-2.484.634 4.5 4.5 0 0 1-1.935-.424 1.25 1.25 0 0 1-.764.258h-1.71a1.255 1.255 0 0 1-1.256-1.255V7.687a2.4 2.4 0 0 1-.428.625c.253.23.412.561.412.93v7.553a1.255 1.255 0 0 1-1.256 1.255h-1.843a1.25 1.25 0 0 1-.894-.373c-.228.23-.544.373-.894.373H51.32a1.255 1.255 0 0 1-1.256-1.255v-1.251l-.061.117a4.7 4.7 0 0 1-1.782 1.884 4.77 4.77 0 0 1-2.485.67 5.6 5.6 0 0 1-1.485-.188l.009 2.764a1.255 1.255 0 0 1-1.255 1.259h-1.729a1.255 1.255 0 0 1-1.255-1.255v-3.537a1.255 1.255 0 0 1-1.167.793h-1.679a1.25 1.25 0 0 1-.77-.263 4.5 4.5 0 0 1-1.945.429c-.885 0-1.724-.21-2.495-.632l-.017-.01a5 5 0 0 1-1.081-.836 1.255 1.255 0 0 1-1.254 1.312h-1.81a1.255 1.255 0 0 1-1.228-.99l-.782-3.625-2.044 3.939a1.25 1.25 0 0 1-1.115.676h-.098a1.25 1.25 0 0 1-1.116-.68l-2.061-3.994zM35.92 16.63l.207-.114.223-.15q.493-.356.735-.785l.061-.118.033 1.332h1.678V9.242h-1.694l-.033 1.267q-.133-.329-.526-.658l-.032-.028a3.2 3.2 0 0 0-.668-.428l-.27-.12a3.3 3.3 0 0 0-1.235-.23q-1.136-.001-1.974.493a3.36 3.36 0 0 0-1.3 1.382q-.445.89-.444 2.074 0 1.2.51 2.107a3.8 3.8 0 0 0 1.382 1.381 3.9 3.9 0 0 0 1.893.477q.795 0 1.455-.33zm-2.789-5.38q-.576.675-.575 1.762 0 1.102.559 1.794.576.675 1.645.675a2.25 2.25 0 0 0 .934-.19 2.2 2.2 0 0 0 .468-.29l.178-.161a2.2 2.2 0 0 0 .397-.561q.244-.5.244-1.15v-.115q0-.708-.296-1.267l-.043-.077a2.2 2.2 0 0 0-.633-.709l-.13-.086-.047-.028a2.1 2.1 0 0 0-1.073-.285q-1.052 0-1.629.692zm2.316 2.706c.163-.17.28-.407.28-.83v-.114c0-.292-.06-.508-.15-.68a.96.96 0 0 0-.353-.389.85.85 0 0 0-.464-.127c-.4 0-.56.114-.664.239l-.01.012c-.148.174-.275.45-.275.945 0 .506.122.801.27.99.097.11.266.224.68.224.303 0 .504-.09.687-.269zm7.545 1.705a2.6 2.6 0 0 0 .331.423q.319.33.755.548l.173.074q.65.255 1.49.255 1.02 0 1.844-.493a3.45 3.45 0 0 0 1.316-1.4q.493-.904.493-2.089 0-1.909-.988-2.913-.988-1.02-2.584-1.02-.898 0-1.575.347a3 3 0 0 0-.415.262l-.199.166a3.4 3.4 0 0 0-.64.82V9.242h-1.712v11.553h1.729l-.017-5.134zm.53-1.138q.206.29.48.5l.155.11.053.034q.51.296 1.119.297 1.07 0 1.645-.675.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.435 0-.835.16a2 2 0 0 0-.284.136 2 2 0 0 0-.363.254 2.2 2.2 0 0 0-.46.569l-.082.162a2.6 2.6 0 0 0-.213 1.072v.115q0 .707.296 1.267l.135.211zm.964-.818a1.1 1.1 0 0 0 .367.385.94.94 0 0 0 .476.118c.423 0 .59-.117.687-.23.159-.194.28-.478.28-.95 0-.53-.133-.8-.266-.952l-.021-.025c-.078-.094-.231-.221-.68-.221a1 1 0 0 0-.503.135l-.012.007a.86.86 0 0 0-.335.343c-.073.133-.132.324-.132.614v.115a1.4 1.4 0 0 0 .14.66zm15.7-6.222q.347-.346.346-.856a1.05 1.05 0 0 0-.345-.79 1.18 1.18 0 0 0-.84-.329q-.51 0-.855.33a1.05 1.05 0 0 0-.346.79q0 .51.346.855.345.346.856.346.51 0 .839-.346zm4.337 9.314.033-1.332q.191.403.59.747l.098.081a4 4 0 0 0 .316.224l.223.122a3.2 3.2 0 0 0 1.44.322 3.8 3.8 0 0 0 1.875-.477 3.5 3.5 0 0 0 1.382-1.366q.527-.89.526-2.09 0-1.184-.444-2.073a3.24 3.24 0 0 0-1.283-1.399q-.823-.51-1.942-.51a3.5 3.5 0 0 0-1.527.344l-.086.043-.165.09a3 3 0 0 0-.33.214q-.432.315-.656.707a2 2 0 0 0-.099.198l.082-1.283V4.701h-1.744v12.095zm.473-2.509a2.5 2.5 0 0 0 .566.7q.117.098.245.18l.144.08a2.1 2.1 0 0 0 .975.232q1.07 0 1.645-.675.576-.69.576-1.778 0-1.102-.576-1.777-.56-.691-1.645-.692a2.2 2.2 0 0 0-1.015.235q-.22.113-.415.282l-.15.142a2.1 2.1 0 0 0-.42.594q-.223.479-.223 1.1v.115q0 .705.293 1.26zm2.616-.293c.157-.191.28-.479.28-.967 0-.51-.13-.79-.276-.961l-.021-.026c-.082-.1-.232-.225-.67-.225a.87.87 0 0 0-.681.279l-.012.011c-.154.155-.274.38-.274.807v.115c0 .285.057.499.144.669a1.1 1.1 0 0 0 .367.405c.137.082.28.123.455.123.423 0 .59-.118.686-.23zm8.266-3.013q.345-.13.724-.14l.069-.002q.493 0 .642.099l.247-1.794q-.196-.099-.717-.099a2.3 2.3 0 0 0-.545.063 2 2 0 0 0-.411.148 2.2 2.2 0 0 0-.4.249 2.5 2.5 0 0 0-.485.499 2.7 2.7 0 0 0-.32.581l-.05.137v-1.48h-1.778v7.553h1.777v-3.884q0-.546.159-.943a1.5 1.5 0 0 1 .466-.636 2.5 2.5 0 0 1 .399-.253 2 2 0 0 1 .224-.099zm9.784 2.656.05-.922q0-1.743-.856-2.698-.838-.97-2.584-.97-1.119-.001-2.007.493a3.46 3.46 0 0 0-1.4 1.382q-.493.906-.493 2.106 0 1.07.428 1.975.428.89 1.332 1.432.906.526 2.255.526.973 0 1.668-.185l.044-.012.135-.04q.613-.184.984-.421l-.542-1.267q-.3.162-.642.274l-.297.087q-.51.131-1.3.131-.954 0-1.497-.444a1.6 1.6 0 0 1-.192-.193q-.366-.44-.512-1.234l-.004-.021zm-5.427-1.256-.003.022h3.752v-.138q-.011-.727-.288-1.118a1 1 0 0 0-.156-.176q-.46-.428-1.316-.428-.986 0-1.494.604-.379.45-.494 1.234zm-27.053 2.77V4.7h-1.86v12.095h5.333V15.15zm7.103-5.908v7.553h-1.843V9.242h1.843z'/%3E%3Cpath fill='%23fff' d='m19.63 11.151-.757-1.71-.345 1.71-1.12 5.644h-1.827L18.083 4.7h.197l3.325 6.533.988 2.19.988-2.19L26.839 4.7h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.93 5.644h-.098l-2.913-5.644zm14.836 5.81q-1.02 0-1.893-.478a3.8 3.8 0 0 1-1.381-1.382q-.51-.906-.51-2.106 0-1.185.444-2.074a3.36 3.36 0 0 1 1.3-1.382q.839-.494 1.974-.494a3.3 3.3 0 0 1 1.234.231 3.3 3.3 0 0 1 .97.575q.396.33.527.659l.033-1.267h1.694v7.553H37.18l-.033-1.332q-.279.593-1.02 1.053a3.17 3.17 0 0 1-1.662.444zm.296-1.482q.938 0 1.58-.642.642-.66.642-1.711v-.115q0-.708-.296-1.267a2.2 2.2 0 0 0-.807-.872 2.1 2.1 0 0 0-1.119-.313q-1.053 0-1.629.692-.575.675-.575 1.76 0 1.103.559 1.795.577.675 1.645.675zm6.521-6.237h1.711v1.4q.906-1.597 2.83-1.597 1.596 0 2.584 1.02.988 1.005.988 2.914 0 1.185-.493 2.09a3.46 3.46 0 0 1-1.316 1.399 3.5 3.5 0 0 1-1.844.493q-.954 0-1.662-.329a2.67 2.67 0 0 1-1.086-.97l.017 5.134h-1.728zm4.048 6.22q1.07 0 1.645-.674.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.592 0-1.12.296-.51.28-.822.823-.296.527-.296 1.234v.115q0 .708.296 1.267.313.543.823.855.51.296 1.119.297z'/%3E%3Cpath fill='%23e1e3e9' d='M51.325 4.7h1.86v10.45h3.473v1.646h-5.333zm7.12 4.542h1.843v7.553h-1.843zm.905-1.415a1.16 1.16 0 0 1-.856-.346 1.17 1.17 0 0 1-.346-.856 1.05 1.05 0 0 1 .346-.79q.346-.329.856-.329.494 0 .839.33a1.05 1.05 0 0 1 .345.79 1.16 1.16 0 0 1-.345.855q-.33.346-.84.346zm7.875 9.133a3.17 3.17 0 0 1-1.662-.444q-.723-.46-1.004-1.053l-.033 1.332h-1.71V4.701h1.743v4.657l-.082 1.283q.279-.658 1.086-1.119a3.5 3.5 0 0 1 1.778-.477q1.119 0 1.942.51a3.24 3.24 0 0 1 1.283 1.4q.445.888.444 2.072 0 1.201-.526 2.09a3.5 3.5 0 0 1-1.382 1.366 3.8 3.8 0 0 1-1.876.477zm-.296-1.481q1.069 0 1.645-.675.577-.69.577-1.778 0-1.102-.577-1.776-.56-.691-1.645-.692a2.12 2.12 0 0 0-1.58.659q-.642.641-.642 1.694v.115q0 .71.296 1.267a2.4 2.4 0 0 0 .807.872 2.1 2.1 0 0 0 1.119.313zm5.927-6.237h1.777v1.481q.263-.757.856-1.217a2.14 2.14 0 0 1 1.349-.46q.527 0 .724.098l-.247 1.794q-.149-.099-.642-.099-.774 0-1.416.494-.626.493-.626 1.58v3.883h-1.777V9.242zm9.534 7.718q-1.35 0-2.255-.526-.904-.543-1.332-1.432a4.6 4.6 0 0 1-.428-1.975q0-1.2.493-2.106a3.46 3.46 0 0 1 1.4-1.382q.889-.495 2.007-.494 1.744 0 2.584.97.855.956.856 2.7 0 .444-.05.92h-5.43q.18 1.005.708 1.45.542.443 1.497.443.79 0 1.3-.131a4 4 0 0 0 .938-.362l.542 1.267q-.411.263-1.119.46-.708.198-1.711.197zm1.596-4.558q.016-1.02-.444-1.432-.46-.428-1.316-.428-1.728 0-1.991 1.86z'/%3E%3Cpath d='M5.074 15.948a.484.657 0 0 0-.486.659v1.84a.484.657 0 0 0 .486.659h4.101a.484.657 0 0 0 .486-.659v-1.84a.484.657 0 0 0-.486-.659zm3.56 1.16H5.617v.838h3.017z' style='fill:%23fff;fill-rule:evenodd;stroke-width:1.03600001'/%3E%3Cg style='stroke-width:1.12603545'%3E%3Cpath d='M-9.408-1.416c-3.833-.025-7.056 2.912-7.08 6.615-.02 3.08 1.653 4.832 3.107 6.268.903.892 1.721 1.74 2.32 2.902l-.525-.004c-.543-.003-.992.304-1.24.639a1.87 1.87 0 0 0-.362 1.121l-.011 1.877c-.003.402.104.787.347 1.125.244.338.688.653 1.23.656l4.142.028c.542.003.99-.306 1.238-.641a1.87 1.87 0 0 0 .363-1.121l.012-1.875a1.87 1.87 0 0 0-.348-1.127c-.243-.338-.688-.653-1.23-.656l-.518-.004c.597-1.145 1.425-1.983 2.348-2.87 1.473-1.414 3.18-3.149 3.2-6.226-.016-3.59-2.923-6.684-6.993-6.707m-.006 1.1v.002c3.274.02 5.92 2.532 5.9 5.6-.017 2.706-1.39 4.026-2.863 5.44-1.034.994-2.118 2.033-2.814 3.633-.018.041-.052.055-.075.065q-.013.004-.02.01a.34.34 0 0 1-.226.084.34.34 0 0 1-.224-.086l-.092-.077c-.699-1.615-1.768-2.669-2.781-3.67-1.454-1.435-2.797-2.762-2.78-5.478.02-3.067 2.7-5.545 5.975-5.523m-.02 2.826c-1.62-.01-2.944 1.315-2.955 2.96-.01 1.646 1.295 2.988 2.916 2.999h.002c1.621.01 2.943-1.316 2.953-2.961.011-1.646-1.294-2.988-2.916-2.998m-.005 1.1c1.017.006 1.829.83 1.822 1.89s-.83 1.874-1.848 1.867c-1.018-.006-1.829-.83-1.822-1.89s.83-1.874 1.848-1.868m-2.155 11.857 4.14.025c.271.002.49.305.487.676l-.013 1.875c-.003.37-.224.67-.495.668l-4.14-.025c-.27-.002-.487-.306-.485-.676l.012-1.875c.003-.37.224-.67.494-.668' style='color:%23000;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:%23000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:evenodd;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:%23000;solid-opacity:1;vector-effect:none;fill:%23000;fill-opacity:.4;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-9.415-.316C-12.69-.338-15.37 2.14-15.39 5.207c-.017 2.716 1.326 4.041 2.78 5.477 1.013 1 2.081 2.055 2.78 3.67l.092.076a.34.34 0 0 0 .225.086.34.34 0 0 0 .227-.083l.019-.01c.022-.009.057-.024.074-.064.697-1.6 1.78-2.64 2.814-3.634 1.473-1.414 2.847-2.733 2.864-5.44.02-3.067-2.627-5.58-5.901-5.601m-.057 8.784c1.621.011 2.944-1.315 2.955-2.96.01-1.646-1.295-2.988-2.916-2.999-1.622-.01-2.945 1.315-2.955 2.96s1.295 2.989 2.916 3' style='clip-rule:evenodd;fill:%23e1e3e9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-11.594 15.465c-.27-.002-.492.297-.494.668l-.012 1.876c-.003.371.214.673.485.675l4.14.027c.271.002.492-.298.495-.668l.012-1.877c.003-.37-.215-.672-.485-.674z' style='clip-rule:evenodd;fill:%23fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3C/g%3E%3C/svg%3E")}}.maplibregl-ctrl.maplibregl-ctrl-attrib{background-color:hsla(0,0%,100%,.5);margin:0;padding:0 5px}@media screen{.maplibregl-ctrl-attrib.maplibregl-compact{background-color:#fff;border-radius:12px;box-sizing:content-box;color:#000;margin:10px;min-height:20px;padding:2px 24px 2px 0;position:relative}.maplibregl-ctrl-attrib.maplibregl-compact-show{padding:2px 28px 2px 8px;visibility:visible}.maplibregl-ctrl-bottom-left>.maplibregl-ctrl-attrib.maplibregl-compact-show,.maplibregl-ctrl-top-left>.maplibregl-ctrl-attrib.maplibregl-compact-show{border-radius:12px;padding:2px 8px 2px 28px}.maplibregl-ctrl-attrib.maplibregl-compact .maplibregl-ctrl-attrib-inner{display:none}.maplibregl-ctrl-attrib-button{background-color:hsla(0,0%,100%,.5);background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill-rule='evenodd' viewBox='0 0 20 20'%3E%3Cpath d='M4 10a6 6 0 1 0 12 0 6 6 0 1 0-12 0m5-3a1 1 0 1 0 2 0 1 1 0 1 0-2 0m0 3a1 1 0 1 1 2 0v3a1 1 0 1 1-2 0'/%3E%3C/svg%3E");border:0;border-radius:12px;box-sizing:border-box;cursor:pointer;display:none;height:24px;outline:none;position:absolute;right:0;top:0;width:24px}.maplibregl-ctrl-attrib summary.maplibregl-ctrl-attrib-button{-webkit-appearance:none;-moz-appearance:none;appearance:none;list-style:none}.maplibregl-ctrl-attrib summary.maplibregl-ctrl-attrib-button::-webkit-details-marker{display:none}.maplibregl-ctrl-bottom-left .maplibregl-ctrl-attrib-button,.maplibregl-ctrl-top-left .maplibregl-ctrl-attrib-button{left:0}.maplibregl-ctrl-attrib.maplibregl-compact .maplibregl-ctrl-attrib-button,.maplibregl-ctrl-attrib.maplibregl-compact-show .maplibregl-ctrl-attrib-inner{display:block}.maplibregl-ctrl-attrib.maplibregl-compact-show .maplibregl-ctrl-attrib-button{background-color:rgb(0 0 0/5%)}.maplibregl-ctrl-bottom-right>.maplibregl-ctrl-attrib.maplibregl-compact:after{bottom:0;right:0}.maplibregl-ctrl-top-right>.maplibregl-ctrl-attrib.maplibregl-compact:after{right:0;top:0}.maplibregl-ctrl-top-left>.maplibregl-ctrl-attrib.maplibregl-compact:after{left:0;top:0}.maplibregl-ctrl-bottom-left>.maplibregl-ctrl-attrib.maplibregl-compact:after{bottom:0;left:0}}@media screen and (forced-colors:active){.maplibregl-ctrl-attrib.maplibregl-compact:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23fff' fill-rule='evenodd' viewBox='0 0 20 20'%3E%3Cpath d='M4 10a6 6 0 1 0 12 0 6 6 0 1 0-12 0m5-3a1 1 0 1 0 2 0 1 1 0 1 0-2 0m0 3a1 1 0 1 1 2 0v3a1 1 0 1 1-2 0'/%3E%3C/svg%3E")}}@media screen and (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl-attrib.maplibregl-compact:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill-rule='evenodd' viewBox='0 0 20 20'%3E%3Cpath d='M4 10a6 6 0 1 0 12 0 6 6 0 1 0-12 0m5-3a1 1 0 1 0 2 0 1 1 0 1 0-2 0m0 3a1 1 0 1 1 2 0v3a1 1 0 1 1-2 0'/%3E%3C/svg%3E")}}.maplibregl-ctrl-attrib a{color:rgba(0,0,0,.75);text-decoration:none}.maplibregl-ctrl-attrib a:hover{color:inherit;text-decoration:underline}.maplibregl-attrib-empty{display:none}.maplibregl-ctrl-scale{background-color:hsla(0,0%,100%,.75);border:2px solid #333;border-top:#333;box-sizing:border-box;color:#333;font-size:10px;padding:0 5px}.maplibregl-popup{display:flex;left:0;pointer-events:none;position:absolute;top:0;will-change:transform}.maplibregl-popup-anchor-top,.maplibregl-popup-anchor-top-left,.maplibregl-popup-anchor-top-right{flex-direction:column}.maplibregl-popup-anchor-bottom,.maplibregl-popup-anchor-bottom-left,.maplibregl-popup-anchor-bottom-right{flex-direction:column-reverse}.maplibregl-popup-anchor-left{flex-direction:row}.maplibregl-popup-anchor-right{flex-direction:row-reverse}.maplibregl-popup-tip{border:10px solid transparent;height:0;width:0;z-index:1}.maplibregl-popup-anchor-top .maplibregl-popup-tip{align-self:center;border-bottom-color:#fff;border-top:none}.maplibregl-popup-anchor-top-left .maplibregl-popup-tip{align-self:flex-start;border-bottom-color:#fff;border-left:none;border-top:none}.maplibregl-popup-anchor-top-right .maplibregl-popup-tip{align-self:flex-end;border-bottom-color:#fff;border-right:none;border-top:none}.maplibregl-popup-anchor-bottom .maplibregl-popup-tip{align-self:center;border-bottom:none;border-top-color:#fff}.maplibregl-popup-anchor-bottom-left .maplibregl-popup-tip{align-self:flex-start;border-bottom:none;border-left:none;border-top-color:#fff}.maplibregl-popup-anchor-bottom-right .maplibregl-popup-tip{align-self:flex-end;border-bottom:none;border-right:none;border-top-color:#fff}.maplibregl-popup-anchor-left .maplibregl-popup-tip{align-self:center;border-left:none;border-right-color:#fff}.maplibregl-popup-anchor-right .maplibregl-popup-tip{align-self:center;border-left-color:#fff;border-right:none}.maplibregl-popup-close-button{background-color:transparent;border:0;border-radius:0 3px 0 0;cursor:pointer;position:absolute;right:0;top:0}.maplibregl-popup-close-button:hover{background-color:rgb(0 0 0/5%)}.maplibregl-popup-content{background:#fff;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.1);padding:15px 10px;pointer-events:auto;position:relative}.maplibregl-popup-anchor-top-left .maplibregl-popup-content{border-top-left-radius:0}.maplibregl-popup-anchor-top-right .maplibregl-popup-content{border-top-right-radius:0}.maplibregl-popup-anchor-bottom-left .maplibregl-popup-content{border-bottom-left-radius:0}.maplibregl-popup-anchor-bottom-right .maplibregl-popup-content{border-bottom-right-radius:0}.maplibregl-popup-track-pointer{display:none}.maplibregl-popup-track-pointer *{pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.maplibregl-map:hover .maplibregl-popup-track-pointer{display:flex}.maplibregl-map:active .maplibregl-popup-track-pointer{display:none}.maplibregl-marker{left:0;position:absolute;top:0;transition:opacity .2s;will-change:transform}.maplibregl-user-location-dot,.maplibregl-user-location-dot:before{background-color:#1da1f2;border-radius:50%;height:15px;width:15px}.maplibregl-user-location-dot:before{animation:maplibregl-user-location-dot-pulse 2s infinite;content:"";position:absolute}.maplibregl-user-location-dot:after{border:2px solid #fff;border-radius:50%;box-shadow:0 0 3px rgba(0,0,0,.35);box-sizing:border-box;content:"";height:19px;left:-2px;position:absolute;top:-2px;width:19px}@keyframes maplibregl-user-location-dot-pulse{0%{opacity:1;transform:scale(1)}70%{opacity:0;transform:scale(3)}to{opacity:0;transform:scale(1)}}.maplibregl-user-location-dot-stale{background-color:#aaa}.maplibregl-user-location-dot-stale:after{display:none}.maplibregl-user-location-accuracy-circle{background-color:#1da1f233;border-radius:100%;height:1px;width:1px}.maplibregl-crosshair,.maplibregl-crosshair .maplibregl-interactive,.maplibregl-crosshair .maplibregl-interactive:active{cursor:crosshair}.maplibregl-boxzoom{background:#fff;border:2px dotted #202020;height:0;left:0;opacity:.5;position:absolute;top:0;width:0}.maplibregl-cooperative-gesture-screen{align-items:center;background:rgba(0,0,0,.4);color:#fff;display:flex;font-size:1.4em;inset:0;justify-content:center;line-height:1.2;opacity:0;padding:1rem;pointer-events:none;position:absolute;transition:opacity 1s ease 1s;z-index:99999}.maplibregl-cooperative-gesture-screen.maplibregl-show{opacity:1;transition:opacity .05s}.maplibregl-cooperative-gesture-screen .maplibregl-mobile-message{display:none}@media (hover:none),(width <= 480px){.maplibregl-cooperative-gesture-screen .maplibregl-desktop-message{display:none}.maplibregl-cooperative-gesture-screen .maplibregl-mobile-message{display:block}}.maplibregl-pseudo-fullscreen{height:100%!important;left:0!important;position:fixed!important;top:0!important;width:100%!important;z-index:99999}
+</style>
+<style>
+/* Düzen: tam ekran 3D ilçe haritası; solda karne paneli (mobilde alttan açılan sayfa), altta güneş saati şeridi. Tek cesur öğe: kobalt başlık + kat kesiti. */
+:root {
+  --land: #E7E9EF;
+  --road: #FFFFFF;
+  --road-edge: #D6D9E3;
+  --park: #D3E2CC;
+  --sea: #2B41CF;
+  --bld: #FBFBFD;
+  --shade: #A7ACCB;
+  --ink: #141A30;
+  --ink-2: #4B5272;
+  --ink-3: #7A809C;
+  --line: #E0E3EC;
+  --surface: #FFFFFF;
+  --surface-2: #F3F4F8;
+  --cobalt: #2B41CF;
+  --cobalt-2: #1E2FA6;
+  --on-cobalt: #FFFFFF;
+  --on-cobalt-2: #C9D0FF;
+  --saffron: #FFAB00;
+  --saffron-soft: #FFE3A3;
+  --night: #262B4D;
+  --strip-shade: #C5C8DC;
+  --g1: #B3362B; --g2: #C2691C; --g3: #8E7F14; --g4: #2F8048; --g5: #146B44;
+  --g-bg: #F3F4F8;
+  --sun0: #3B4171; --sun2: #7D86AE; --sun4: #CDC5AF; --sun6: #F5C24F; --sun8: #FFA000;
+  --seaview0: #E3E5EC; --seaview1: #C3CBF4; --seaview2: #6F86FF;
+  --shadow: 0 1px 2px rgba(20, 26, 70, .08), 0 12px 32px -8px rgba(20, 26, 70, .22);
+  --font: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --r-sheet: 22px;
+  --r-ctl: 999px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --land: #12152A; --road: #20253F; --road-edge: #20253F; --park: #18291F; --sea: #0F1A66; --bld: #3A4064; --shade: #070914;
+    --ink: #ECEEF8; --ink-2: #AAB0CC; --ink-3: #7D84A3; --line: #2A3052; --surface: #181C34; --surface-2: #20253F;
+    --cobalt: #3049E6; --cobalt-2: #2235B8; --on-cobalt: #FFFFFF; --on-cobalt-2: #CDD4FF;
+    --saffron: #FFB21F; --saffron-soft: #5A4210; --night: #0B0E22; --strip-shade: #3A4064;
+    --g1: #F2806F; --g2: #F2A35B; --g3: #D9C75C; --g4: #74C98B; --g5: #4CD39C; --g-bg: #20253F;
+    --seaview0: #3A4064; --seaview1: #4B5AAE; --seaview2: #8FA2FF;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 14px 36px -8px rgba(0, 0, 0, .6);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --land: #12152A; --road: #20253F; --road-edge: #20253F; --park: #18291F; --sea: #0F1A66; --bld: #3A4064; --shade: #070914;
+  --ink: #ECEEF8; --ink-2: #AAB0CC; --ink-3: #7D84A3; --line: #2A3052; --surface: #181C34; --surface-2: #20253F;
+  --cobalt: #3049E6; --cobalt-2: #2235B8; --on-cobalt: #FFFFFF; --on-cobalt-2: #CDD4FF;
+  --saffron: #FFB21F; --saffron-soft: #5A4210; --night: #0B0E22; --strip-shade: #3A4064;
+  --g1: #F2806F; --g2: #F2A35B; --g3: #D9C75C; --g4: #74C98B; --g5: #4CD39C; --g-bg: #20253F;
+  --seaview0: #3A4064; --seaview1: #4B5AAE; --seaview2: #8FA2FF;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 14px 36px -8px rgba(0, 0, 0, .6);
+  color-scheme: dark;
+}
+html, body { height: 100%; }
+[hidden] { display: none !important; }
+body { background: var(--land); color: var(--ink); font-family: var(--font); font-size: 15px; line-height: 1.45; -webkit-font-smoothing: antialiased; overflow: hidden; }
+* { box-sizing: border-box; }
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2.5px solid var(--saffron); outline-offset: 2px; }
+.num { font-variant-numeric: tabular-nums; }
+
+#app { position: relative; height: 100%; }
+#map { position: absolute; inset: 0; }
+
+/* üst çubuk */
+.top { position: absolute; z-index: 5; top: 16px; left: max(16px, env(safe-area-inset-left, 0px)); right: max(16px, env(safe-area-inset-right, 0px)); display: flex; gap: 10px; align-items: flex-start; pointer-events: none; }
+.top > * { pointer-events: auto; }
+.brand { display: flex; align-items: center; gap: 10px; height: 46px; padding: 0 18px 0 14px; background: var(--surface); border-radius: var(--r-ctl); box-shadow: var(--shadow); flex: none; }
+.brand-mark { width: 22px; height: 22px; flex: none; }
+.brand b { font-weight: 850; font-size: 19px; letter-spacing: -.035em; }
+.brand span { color: var(--ink-3); font-size: 13px; }
+.distwrap { position: relative; flex: none; }
+.distbtn { height: 46px; border: 0; border-radius: var(--r-ctl); background: var(--ink); color: var(--surface); box-shadow: var(--shadow); padding: 0 16px 0 18px; display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; }
+.distbtn svg { width: 12px; height: 12px; }
+.distpop { position: absolute; top: 54px; left: 0; width: min(520px, calc(100vw - 32px)); background: var(--surface); border-radius: 18px; box-shadow: var(--shadow); padding: 16px; z-index: 7; }
+.distpop h3 { margin: 0 0 2px; font-size: 16px; font-weight: 800; letter-spacing: -.01em; }
+.distpop p { margin: 0 0 12px; font-size: 12.5px; color: var(--ink-3); }
+.distgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+.distgrid button { text-align: left; border: 0; background: none; border-radius: 10px; padding: 8px 10px; font-size: 14px; font-weight: 700; color: var(--ink); }
+.distgrid button:hover { background: var(--surface-2); }
+.distgrid button[aria-current="true"] { background: var(--cobalt); color: var(--on-cobalt); }
+.distgrid button:disabled { font-weight: 400; color: var(--ink-3); cursor: default; background: none; }
+.distgrid button small { display: block; font-size: 11px; font-weight: 400; color: var(--ink-3); }
+.distgrid button[aria-current="true"] small { color: var(--on-cobalt-2); }
+.loading { position: absolute; z-index: 6; left: 50%; top: 50%; transform: translate(-50%, -50%); background: var(--surface); color: var(--ink); border-radius: 16px; box-shadow: var(--shadow); padding: 14px 20px; font-weight: 700; }
+.search { position: relative; width: min(360px, 100%); }
+.search input { width: 100%; height: 46px; border: 0; border-radius: var(--r-ctl); padding: 0 18px 0 44px; background: var(--surface); box-shadow: var(--shadow); font-size: 15px; }
+.search input::placeholder { color: var(--ink-3); }
+.search svg { position: absolute; left: 16px; top: 15px; width: 16px; height: 16px; color: var(--ink-3); }
+.results { position: absolute; top: 52px; left: 0; right: 0; background: var(--surface); border-radius: 16px; box-shadow: var(--shadow); padding: 6px; display: grid; }
+.results button { text-align: left; border: 0; background: none; padding: 9px 12px; border-radius: 10px; display: grid; gap: 1px; }
+.results button:hover, .results button.on { background: var(--surface-2); }
+.results small { color: var(--ink-3); font-size: 12.5px; }
+.modes { margin-left: auto; display: grid; justify-items: end; gap: 8px; }
+.seg { display: inline-flex; background: var(--surface); border-radius: var(--r-ctl); padding: 4px; box-shadow: var(--shadow); gap: 2px; }
+.seg button { border: 0; background: none; height: 38px; padding: 0 14px; border-radius: var(--r-ctl); font-weight: 600; font-size: 14px; color: var(--ink-2); white-space: nowrap; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--surface); }
+.legend { background: var(--surface); border-radius: 14px; box-shadow: var(--shadow); padding: 10px 14px; font-size: 12.5px; color: var(--ink-2); max-width: 300px; }
+.legend .ramp { height: 8px; border-radius: 4px; margin: 6px 0 4px; background: linear-gradient(90deg, var(--sun0), var(--sun2) 25%, var(--sun4) 50%, var(--sun6) 75%, var(--sun8)); }
+.legend .ends { display: flex; justify-content: space-between; }
+.legend .sw { display: flex; gap: 12px; margin-top: 6px; flex-wrap: wrap; }
+.legend .sw i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+
+/* panel */
+.sheet { position: absolute; z-index: 4; left: max(16px, env(safe-area-inset-left, 0px)); top: 76px; bottom: 16px; width: 400px; background: var(--surface); border-radius: var(--r-sheet); box-shadow: var(--shadow); display: flex; flex-direction: column; overflow: hidden; }
+.sheet-scroll { overflow-y: auto; overscroll-behavior: contain; flex: 1; min-height: 0; }
+.grab { display: none; }
+.head { background: var(--cobalt); color: var(--on-cobalt); padding: 18px 20px 20px; position: relative; }
+.head .where { color: var(--on-cobalt-2); font-size: 13.5px; }
+.head h1 { font-size: 27px; line-height: 1.08; letter-spacing: -.03em; font-weight: 800; margin: 4px 0 14px; text-wrap: balance; }
+.head .sample { font-size: 12.5px; background: var(--cobalt-2); color: var(--on-cobalt-2); border-radius: 10px; padding: 7px 10px; margin-bottom: 14px; }
+.kat-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 13.5px; }
+.stepper { display: inline-flex; align-items: center; background: var(--cobalt-2); border-radius: var(--r-ctl); padding: 3px; }
+.stepper button { width: 30px; height: 30px; border: 0; border-radius: 50%; background: transparent; color: var(--on-cobalt); font-size: 18px; line-height: 1; }
+.stepper button:hover { background: rgba(255, 255, 255, .14); }
+.stepper output { min-width: 58px; text-align: center; font-weight: 700; }
+.src { color: var(--on-cobalt-2); }
+.src.est { color: var(--saffron); }
+.src-line { font-size: 12.5px; margin-top: 10px; }
+
+/* kat kesiti */
+.kesit { display: grid; grid-template-columns: 1fr 150px; gap: 18px; padding: 18px 20px 20px; border-bottom: 1px solid var(--line); }
+.floors { display: flex; flex-direction: column; gap: 3px; align-self: end; }
+.floor { display: grid; grid-template-columns: 22px 1fr; align-items: center; height: var(--fh, 22px); border: 0; padding: 0; background: none; text-align: left; }
+.floor .lab { font-size: 12px; font-weight: 700; color: var(--ink-3); }
+.floor .track { position: relative; height: 100%; background: var(--surface-2); border-radius: 5px; overflow: hidden; }
+.floor .bar { position: absolute; inset: 0 auto 0 0; width: var(--w, 0%); background: var(--c, var(--sun4)); border-radius: 5px; transition: width .35s ease; }
+.floor .wave { position: absolute; right: 7px; top: 50%; margin-top: -4px; width: 16px; height: 8px; color: var(--cobalt); }
+.floor[aria-pressed="true"] .track { box-shadow: inset 0 0 0 2.5px var(--ink); }
+.floor[aria-pressed="true"] .lab { color: var(--ink); }
+.floor:hover .track { box-shadow: inset 0 0 0 1.5px var(--ink-3); }
+.ground-line { height: 3px; border-radius: 2px; background: var(--ink); margin: 4px 0 0 22px; opacity: .85; }
+.fsum { display: grid; align-content: end; gap: 10px; }
+.fsum .kname { font-size: 26px; font-weight: 800; letter-spacing: -.03em; line-height: 1; }
+.fsum dl { margin: 0; display: grid; gap: 8px; }
+.fsum dt { font-size: 12px; color: var(--ink-3); }
+.fsum dd { margin: 1px 0 0; font-weight: 700; font-size: 15px; }
+.kesit-note { grid-column: 1 / -1; font-size: 12.5px; color: var(--ink-3); margin-top: -6px; }
+
+/* karne */
+.sec { padding: 18px 20px 20px; border-bottom: 1px solid var(--line); }
+.sec h2 { font-size: 18px; letter-spacing: -.02em; font-weight: 800; margin: 0 0 4px; }
+.sec .sub { color: var(--ink-3); font-size: 13px; margin: 0 0 14px; }
+.karne { display: grid; gap: 0; }
+.krow { display: grid; grid-template-columns: 1fr 58px; gap: 12px; align-items: center; padding: 11px 0; border-top: 1px solid var(--line); }
+.krow:first-child { border-top: 0; padding-top: 2px; }
+.krow b { display: block; font-size: 15px; }
+.krow span { display: block; font-size: 13px; color: var(--ink-2); margin-top: 1px; }
+.grade { text-align: center; border-radius: 12px; padding: 6px 0 5px; background: var(--g-bg); }
+.grade strong { display: block; font-size: 24px; line-height: 1; font-weight: 850; }
+.grade small { display: block; font-size: 11px; font-weight: 700; margin-top: 3px; }
+.grade.g1 { color: var(--g1); } .grade.g2 { color: var(--g2); } .grade.g3 { color: var(--g3); } .grade.g4 { color: var(--g4); } .grade.g5 { color: var(--g5); }
+.avg { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; padding: 12px 14px; border-radius: 14px; background: var(--surface-2); }
+.avg .n { font-size: 26px; font-weight: 850; letter-spacing: -.03em; }
+.avg .belge { font-weight: 700; text-align: right; font-size: 14px; }
+.avg .belge small { display: block; font-weight: 400; color: var(--ink-3); font-size: 12px; }
+.belge.takdir { color: var(--g5); } .belge.tesekkur { color: var(--g4); }
+
+/* güneş */
+.tabs { display: inline-flex; gap: 2px; background: var(--surface-2); padding: 3px; border-radius: var(--r-ctl); margin-bottom: 14px; flex-wrap: wrap; }
+.tabs button { border: 0; background: none; height: 32px; padding: 0 12px; border-radius: var(--r-ctl); font-size: 13.5px; font-weight: 600; color: var(--ink-2); }
+.tabs button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 3px rgba(20, 26, 70, .15); }
+.strip { width: 100%; height: auto; display: block; }
+.strip-ticks { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--ink-3); margin-top: 4px; }
+.sunline { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: center; margin-top: 16px; }
+.compass { width: 112px; height: 112px; }
+.compass text { font-size: 10px; font-weight: 700; fill: var(--ink-3); font-family: var(--font); }
+.facts { display: grid; gap: 8px; font-size: 13.5px; color: var(--ink-2); }
+.facts strong { color: var(--ink); font-weight: 700; }
+.keys { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--ink-3); margin-top: 10px; }
+.keys i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+
+.chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+.chip { font-size: 12.5px; font-weight: 600; border-radius: var(--r-ctl); padding: 5px 11px; background: var(--surface-2); color: var(--ink-2); }
+.chip.on { background: var(--cobalt); color: var(--on-cobalt); }
+
+.walk { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.walk li { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 9px 0; border-top: 1px solid var(--line); font-size: 14px; align-items: baseline; }
+.walk li:first-child { border-top: 0; padding-top: 0; }
+.walk small { display: block; color: var(--ink-3); font-size: 12.5px; }
+.walk .min { font-weight: 800; font-size: 16px; }
+.walk .min span { font-weight: 500; font-size: 12px; color: var(--ink-3); margin-left: 2px; }
+
+.age { display: flex; height: 10px; border-radius: 5px; overflow: hidden; margin: 12px 0 6px; gap: 2px; }
+.age i { display: block; height: 100%; }
+.agekeys { display: flex; justify-content: space-between; font-size: 12px; color: var(--ink-3); gap: 8px; flex-wrap: wrap; }
+.big-stat { display: flex; align-items: baseline; gap: 10px; margin-top: 4px; }
+.big-stat strong { font-size: 30px; font-weight: 850; letter-spacing: -.03em; }
+.note { font-size: 12.5px; color: var(--ink-3); margin: 12px 0 0; }
+.note a { color: var(--ink-2); }
+.about { padding: 18px 20px 26px; font-size: 12.5px; color: var(--ink-3); display: grid; gap: 8px; }
+.about p { margin: 0; }
+.about a { color: var(--ink-2); }
+
+/* güneş şeridi (harita altı) */
+.sunbar { position: absolute; z-index: 5; left: calc(max(16px, env(safe-area-inset-left, 0px)) + 416px); right: max(16px, env(safe-area-inset-right, 0px)); bottom: 16px; background: var(--surface); border-radius: 20px; box-shadow: var(--shadow); padding: 10px 14px 10px 10px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.play { width: 42px; height: 42px; border-radius: 50%; border: 0; background: var(--saffron); color: #2A1B00; display: grid; place-items: center; flex: none; }
+.play svg { width: 16px; height: 16px; }
+.sunbar .tabs { margin: 0; }
+.slider { flex: 1; min-width: 160px; display: grid; gap: 2px; }
+.slider input { width: 100%; accent-color: var(--saffron); margin: 0; }
+.clock { min-width: 128px; }
+.clock strong { font-size: 22px; font-weight: 850; letter-spacing: -.02em; display: block; line-height: 1.05; }
+.clock small { color: var(--ink-3); font-size: 12px; }
+
+.maplibregl-ctrl-attrib { font-family: var(--font); font-size: 11px; }
+.maplibregl-ctrl-bottom-right { bottom: 84px; }
+.pin { font-family: var(--font); font-size: 12px; font-weight: 700; background: var(--surface); color: var(--ink); border-radius: var(--r-ctl); padding: 4px 9px 4px 7px; box-shadow: var(--shadow); display: flex; align-items: center; gap: 6px; white-space: nowrap; pointer-events: none; }
+.pin i { width: 8px; height: 8px; border-radius: 2px; background: var(--ink); display: block; }
+.pin.ferry i { background: var(--cobalt); border-radius: 50%; }
+.place { font-family: var(--font); font-size: 15px; font-weight: 800; letter-spacing: .02em; color: var(--ink-2); text-shadow: 0 0 4px var(--land), 0 0 10px var(--land); pointer-events: none; }
+
+@media (max-width: 760px) {
+  .top { flex-wrap: wrap; top: 10px; gap: 8px; }
+  .brand { height: 42px; padding: 0 14px 0 12px; }
+  .brand span { display: none; }
+  .distbtn { height: 42px; padding: 0 12px 0 14px; font-size: 14px; }
+  .distgrid { grid-template-columns: repeat(2, 1fr); }
+  .brand b { font-size: 17px; }
+  .search { flex: 1; width: auto; min-width: 0; }
+  .search input { height: 42px; }
+  .search svg { top: 13px; }
+  .modes { margin-left: 0; width: 100%; justify-items: start; }
+  .seg { overflow-x: auto; max-width: 100%; }
+  .seg button { height: 34px; padding: 0 11px; font-size: 13px; }
+  .legend { display: none; }
+  .sunbar { left: max(10px, env(safe-area-inset-left, 0px)); right: max(10px, env(safe-area-inset-right, 0px)); top: 112px; bottom: auto; padding: 8px 10px; gap: 8px 10px; border-radius: 16px; }
+  .sunbar .tabs button { height: 28px; padding: 0 9px; font-size: 12.5px; }
+  .play { width: 36px; height: 36px; }
+  .clock { min-width: 0; }
+  .clock strong { font-size: 18px; }
+  .clock small { display: none; }
+  .sheet { left: 0; right: 0; width: auto; top: auto; bottom: 0; height: var(--sheet-h, 46%); border-radius: var(--r-sheet) var(--r-sheet) 0 0; transition: height .3s ease; padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .sheet.open { --sheet-h: 86%; }
+  .grab { display: block; position: absolute; z-index: 2; top: 0; left: 0; right: 0; height: 22px; border: 0; background: none; }
+  .grab::after { content: ""; position: absolute; left: 50%; top: 8px; width: 40px; height: 5px; margin-left: -20px; border-radius: 3px; background: rgba(255, 255, 255, .55); }
+  .head { padding-top: 24px; }
+  .head h1 { font-size: 23px; }
+  .kesit { grid-template-columns: 1fr 130px; }
+  .maplibregl-ctrl-bottom-right { bottom: calc(46% + 4px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+</style>
+
+<div id="app">
+  <div id="map" role="application" aria-label="3D bina haritası"></div>
+  <div class="loading" id="loading" hidden>Yükleniyor</div>
+
+  <div class="top">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="11" height="15" rx="1.5" fill="var(--ink)"/><rect x="5.5" y="10" width="2.5" height="2.5" fill="var(--saffron)"/><rect x="9.5" y="10" width="2.5" height="2.5" fill="var(--saffron)"/><rect x="5.5" y="14.5" width="2.5" height="2.5" fill="var(--surface)"/><rect x="9.5" y="14.5" width="2.5" height="2.5" fill="var(--saffron)"/><circle cx="18.5" cy="5.5" r="3.5" fill="var(--saffron)"/></svg>
+      <b>Ev Karnesi</b>
+    </div>
+    <div class="distwrap"><button class="distbtn" id="distBtn" aria-haspopup="true" aria-expanded="false"><span id="distName">Kadıköy</span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><div class="distpop" id="distPop" hidden></div></div>
+    <div class="search">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M11 11l3.6 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <input id="q" type="search" placeholder="Sokak veya cadde ara" autocomplete="off" aria-label="Adres ara">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <div class="modes">
+      <div class="seg" role="group" aria-label="Harita görünümü">
+        <button id="m-golge" data-mode="golge">Gölgeler</button>
+        <button id="m-gunes" data-mode="gunes">Kış güneşi</button>
+        <button id="m-deniz" data-mode="deniz">Deniz manzarası</button>
+      </div>
+      <div class="legend" id="legend"></div>
+    </div>
+  </div>
+
+  <aside class="sheet" id="sheet" aria-label="Bina karnesi">
+    <button class="grab" id="grab" aria-label="Karneyi genişlet"></button>
+    <div class="sheet-scroll" id="panel"></div>
+  </aside>
+
+  <div class="sunbar">
+    <button class="play" id="play" aria-label="Günü oynat"><svg viewBox="0 0 16 16"><path id="play-ic" d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg></button>
+    <div class="tabs" id="dates" role="group" aria-label="Tarih"></div>
+    <label class="slider"><span class="sr" hidden>Saat</span><input id="t" type="range" min="300" max="1260" step="5" aria-label="Saat"></label>
+    <div class="clock"><strong class="num" id="clock">14:00</strong><small id="sunread"></small></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script>window.EVINDEX=[{"key": "atasehir", "name": "Ataşehir", "n": 27155}, {"key": "bakirkoy", "name": "Bakırköy", "n": 8384}, {"key": "beyoglu", "name": "Beyoğlu", "n": 10979}, {"key": "besiktas", "name": "Beşiktaş", "n": 8848}, {"key": "fatih", "name": "Fatih", "n": 30761}, {"key": "kadikoy", "name": "Kadıköy", "n": 20024}, {"key": "maltepe", "name": "Maltepe", "n": 25961}, {"key": "umraniye", "name": "Ümraniye", "n": 32283}, {"key": "uskudar", "name": "Üsküdar", "n": 25989}, {"key": "sisli", "name": "Şişli", "n": 8920}];</script>
+<script>// Ev Karnesi hesap motoru — güneş, gölge, deniz manzarası, simge görüş hattı
+// Yerel metrik düzlem (eşdikdörtgen, merkez etrafında ~2 km için < 0.1% hata)
+(function (root) {
+  const D2R = Math.PI / 180, R2D = 180 / Math.PI;
+  const FLOOR_H = 3.0, WIN_Z = 1.5, PARTY = 0.7, OFF = 0.6;
+
+  function Engine(data) {
+    const [lon0, lat0] = data.center;
+    this.lon0 = lon0; this.lat0 = lat0;
+    this.kx = 111320 * Math.cos(lat0 * D2R); this.ky = 110574;
+    // DEM
+    const d = data.dem; this.dem = d; this.demv = Float32Array.from(d.v, v => v / 10); this.dsmv = d.s ? Float32Array.from(d.s, v => v / 10) : null;
+    // buildings
+    this.B = data.b.map((b, i) => {
+      const xs = [], ys = [];
+      for (const [lo, la] of b.r) { const p = this.P(lo, la); xs.push(p[0]); ys.push(p[1]); }
+      if (xs.length > 1 && xs[0] === xs[xs.length - 1] && ys[0] === ys[ys.length - 1]) { xs.pop(); ys.pop(); }
+      let A = 0; for (let k = 0; k < xs.length; k++) { const j = (k + 1) % xs.length; A += xs[k] * ys[j] - xs[j] * ys[k]; }
+      let minx = Infinity, miny = Infinity, maxx = -Infinity, maxy = -Infinity;
+      for (let k = 0; k < xs.length; k++) { minx = Math.min(minx, xs[k]); maxx = Math.max(maxx, xs[k]); miny = Math.min(miny, ys[k]); maxy = Math.max(maxy, ys[k]); }
+      return { i, xs, ys, ccw: A > 0, area: Math.abs(A) / 2, minx, miny, maxx, maxy, g: b.g, h: b.h, lv: b.lv, top: b.g + b.h };
+    });
+    this.maxTop = Math.max(...this.B.map(b => b.top));
+    this.cell = 40;
+    this.grid = new Map();
+    for (const b of this.B) this._ins(this.grid, b.minx, b.miny, b.maxx, b.maxy, b.i);
+    this.stamp = new Int32Array(this.B.length); this.sid = 1;
+    // sea
+    this.SE = []; this.seaGrid = new Map();
+    for (const ring of data.sea) {
+      const pts = ring.map(([lo, la]) => this.P(lo, la));
+      for (let k = 0; k < pts.length - 1; k++) {
+        const a = pts[k], c = pts[k + 1], id = this.SE.length;
+        this.SE.push([a[0], a[1], c[0], c[1]]);
+        this._ins(this.seaGrid, Math.min(a[0], c[0]), Math.min(a[1], c[1]), Math.max(a[0], c[0]), Math.max(a[1], c[1]), id);
+      }
+    }
+    this.seaRings = data.sea.map(r => r.map(([lo, la]) => this.P(lo, la)));
+    this.seaRange = data.seaRange || 4000;
+  }
+  const E = Engine.prototype;
+  E.P = function (lon, lat) { return [(lon - this.lon0) * this.kx, (lat - this.lat0) * this.ky]; };
+  E.INV = function (x, y) { return [this.lon0 + x / this.kx, this.lat0 + y / this.ky]; };
+  E._key = (cx, cy) => cx * 100003 + cy;
+  E._ins = function (grid, x0, y0, x1, y1, id) {
+    const c = this.cell;
+    for (let cx = Math.floor(x0 / c); cx <= Math.floor(x1 / c); cx++)
+      for (let cy = Math.floor(y0 / c); cy <= Math.floor(y1 / c); cy++) {
+        const k = this._key(cx, cy); let a = grid.get(k); if (!a) grid.set(k, a = []); a.push(id);
+      }
+  };
+  E.ground = function (x, y) {
+    const [lon, lat] = this.INV(x, y), d = this.dem;
+    let c = (lon - d.lon0) / d.step - 0.5, r = (d.lat0 - lat) / d.step - 0.5;
+    if (c < 0 || r < 0 || c > d.w - 1 || r > d.h - 1) return 0;
+    const c0 = Math.min(d.w - 2, Math.floor(c)), r0 = Math.min(d.h - 2, Math.floor(r)), fc = c - c0, fr = r - r0, v = this.demv, w = d.w;
+    return v[r0 * w + c0] * (1 - fc) * (1 - fr) + v[r0 * w + c0 + 1] * fc * (1 - fr) + v[(r0 + 1) * w + c0] * (1 - fc) * fr + v[(r0 + 1) * w + c0 + 1] * fc * fr;
+  };
+  // uzak engel yüzeyi: DSM (binalar dahil) + dünya eğriliği/kırılma düzeltmesi; yakında (<80 m) çıplak arazi
+  const CURV = 0.87 / 12742000;
+  E.farSurf = function (x, y, t) {
+    let v = this.ground(x, y);
+    if (this.dsmv && t > 80) { const s = this._sample(this.dsmv, x, y); if (s > v) v = s; }
+    return v - t * t * CURV;
+  };
+  E._sample = function (arr, x, y) {
+    const [lon, lat] = this.INV(x, y), d = this.dem;
+    let c = (lon - d.lon0) / d.step - 0.5, r = (d.lat0 - lat) / d.step - 0.5;
+    if (c < 0 || r < 0 || c > d.w - 1 || r > d.h - 1) return 0;
+    const c0 = Math.min(d.w - 2, Math.floor(c)), r0 = Math.min(d.h - 2, Math.floor(r)), fc = c - c0, fr = r - r0, w = d.w;
+    return arr[r0 * w + c0] * (1 - fc) * (1 - fr) + arr[r0 * w + c0 + 1] * fc * (1 - fr) + arr[(r0 + 1) * w + c0] * (1 - fc) * fr + arr[(r0 + 1) * w + c0 + 1] * fc * fr;
+  };
+  E.inside = function (b, x, y) {
+    if (x < b.minx || x > b.maxx || y < b.miny || y > b.maxy) return false;
+    let ins = false; const xs = b.xs, ys = b.ys, n = xs.length;
+    for (let i = 0, j = n - 1; i < n; j = i++) {
+      if ((ys[i] > y) !== (ys[j] > y) && x < (xs[j] - xs[i]) * (y - ys[i]) / (ys[j] - ys[i]) + xs[i]) ins = !ins;
+    }
+    return ins;
+  };
+  E.buildingAt = function (x, y, except) {
+    const a = this.grid.get(this._key(Math.floor(x / this.cell), Math.floor(y / this.cell)));
+    if (!a) return -1;
+    for (const id of a) if (id !== except && this.inside(this.B[id], x, y)) return id;
+    return -1;
+  };
+  // DDA over grid cells along ray; calls fn(cellArray, tEnter, tExit) in order; fn returns true to stop
+  E._walk = function (grid, ox, oy, ux, uy, L, fn) {
+    const c = this.cell;
+    let cx = Math.floor(ox / c), cy = Math.floor(oy / c);
+    const sx = ux > 0 ? 1 : -1, sy = uy > 0 ? 1 : -1;
+    const tdx = ux !== 0 ? Math.abs(c / ux) : Infinity, tdy = uy !== 0 ? Math.abs(c / uy) : Infinity;
+    let tmx = ux !== 0 ? (((ux > 0 ? cx + 1 : cx) * c - ox) / ux) : Infinity;
+    let tmy = uy !== 0 ? (((uy > 0 ? cy + 1 : cy) * c - oy) / uy) : Infinity;
+    let t0 = 0;
+    while (t0 <= L) {
+      const t1 = Math.min(tmx, tmy);
+      const a = grid.get(this._key(cx, cy));
+      if (a && fn(a, t0, Math.min(t1, L))) return;
+      if (tmx < tmy) { cx += sx; t0 = tmx; tmx += tdx; } else { cy += sy; t0 = tmy; tmy += tdy; }
+    }
+  };
+  function segHit(ox, oy, ux, uy, ax, ay, bx, by) {
+    const ex = bx - ax, ey = by - ay, den = ux * ey - uy * ex;
+    if (Math.abs(den) < 1e-12) return Infinity;
+    const wx = ax - ox, wy = ay - oy;
+    const t = (wx * ey - wy * ex) / den, s = (wx * uy - wy * ux) / den;
+    return (s >= 0 && s <= 1 && t > 0.05) ? t : Infinity;
+  }
+  E.entry = function (b, ox, oy, ux, uy) {
+    let tm = Infinity; const xs = b.xs, ys = b.ys, n = xs.length;
+    for (let k = 0; k < n; k++) { const j = (k + 1) % n; const t = segHit(ox, oy, ux, uy, xs[k], ys[k], xs[j], ys[j]); if (t < tm) tm = t; }
+    return tm;
+  };
+  // obstacles along ray: calls cb(t, top) for each building entered (unordered across a cell), up to L
+  E._obstacles = function (ox, oy, ux, uy, L, cb) {
+    const st = ++this.sid;
+    this._walk(this.grid, ox, oy, ux, uy, L, (a) => {
+      let stop = false;
+      for (const id of a) {
+        if (this.stamp[id] === st) continue; this.stamp[id] = st;
+        const b = this.B[id], t = this.entry(b, ox, oy, ux, uy);
+        if (t <= L && cb(t, b.top) === true) stop = true;
+      }
+      return stop;
+    });
+  };
+  E.firstSea = function (ox, oy, ux, uy, L) {
+    let best = Infinity;
+    this._walk(this.seaGrid, ox, oy, ux, uy, L, (a, t0, t1) => {
+      for (const id of a) { const s = this.SE[id]; const t = segHit(ox, oy, ux, uy, s[0], s[1], s[2], s[3]); if (t < best) best = t; }
+      return best <= t1 + 1e-6;
+    });
+    return best;
+  };
+  E.inSea = function (x, y) {
+    let ins = false;
+    for (const r of this.seaRings) {
+      for (let i = 0, j = r.length - 1; i < r.length; j = i++) {
+        if ((r[i][1] > y) !== (r[j][1] > y) && x < (r[j][0] - r[i][0]) * (y - r[i][1]) / (r[j][1] - r[i][1]) + r[i][0]) ins = !ins;
+      }
+    }
+    return ins;
+  };
+
+  // --- sun position (UTC ms) ---
+  function sunPos(ms, lat, lon) {
+    const d = ms / 86400000 - 10957.5;
+    const g = (357.529 + 0.98560028 * d) * D2R;
+    const q = 280.459 + 0.98564736 * d;
+    const L = (q + 1.915 * Math.sin(g) + 0.020 * Math.sin(2 * g)) * D2R;
+    const e = (23.439 - 0.00000036 * d) * D2R;
+    const RA = Math.atan2(Math.cos(e) * Math.sin(L), Math.cos(L));
+    const dec = Math.asin(Math.sin(e) * Math.sin(L));
+    let gmst = (18.697374558 + 24.06570982441908 * d) % 24; if (gmst < 0) gmst += 24;
+    const H = (gmst * 15 + lon) * D2R - RA;
+    const la = lat * D2R;
+    const alt = Math.asin(Math.sin(la) * Math.sin(dec) + Math.cos(la) * Math.cos(dec) * Math.cos(H));
+    let az = Math.atan2(Math.sin(H), Math.cos(H) * Math.sin(la) - Math.tan(dec) * Math.cos(la)) * R2D + 180;
+    az = ((az % 360) + 360) % 360;
+    return { alt: alt * R2D, az };
+  }
+  Engine.sunPos = sunPos;
+  E.sun = function (ms) { return sunPos(ms, this.lat0, this.lon0); };
+  // Türkiye UTC+3 sabit
+  Engine.localMs = (y, m, d, hh, mm) => Date.UTC(y, m - 1, d, hh - 3, mm || 0);
+
+  // --- facades ---
+  E.facades = function (id) {
+    const b = this.B[id], xs = b.xs, ys = b.ys, n = xs.length, out = [];
+    for (let k = 0; k < n; k++) {
+      const j = (k + 1) % n, dx = xs[j] - xs[k], dy = ys[j] - ys[k], len = Math.hypot(dx, dy);
+      if (len < 2.5) continue;
+      let nx = dy / len, ny = -dx / len; if (!b.ccw) { nx = -nx; ny = -ny; }
+      const mx = (xs[k] + xs[j]) / 2, my = (ys[k] + ys[j]) / 2;
+      // party wall: outward point inside another building
+      const party = this.buildingAt(mx + nx * PARTY, my + ny * PARTY, id) >= 0;
+      if (party) continue;
+      const az = ((Math.atan2(nx, ny) * R2D) + 360) % 360;
+      out.push({ x: mx + nx * OFF, y: my + ny * OFF, nx, ny, len, az });
+    }
+    return out;
+  };
+  E.floorZ = function (id, k) { return this.B[id].g + WIN_Z + k * FLOOR_H; };
+
+  // shadow line: absolute height above which point (x,y) gets direct sun
+  E.shadowLine = function (x, y, sun) {
+    const a = sun.az * D2R, ux = Math.sin(a), uy = Math.cos(a), ta = Math.tan(sun.alt * D2R);
+    const L = Math.min(900, (this.maxTop + 5) / Math.max(ta, 0.02));
+    let S = -Infinity;
+    this._obstacles(x, y, ux, uy, L, (t, top) => { const v = top - t * ta; if (v > S) S = v; });
+    for (let t = 10; t <= L; t += 15) { const v = this.ground(x + ux * t, y + uy * t) - t * ta; if (v > S) S = v; }
+    return S;
+  };
+
+  // per-facade, per-time shadow lines for a day; step minutes
+  E.dayProfile = function (id, y, m, d, step = 15) {
+    const F = this.facades(id), times = [];
+    for (let mins = 4 * 60; mins <= 21 * 60; mins += step) {
+      const ms = Engine.localMs(y, m, d, Math.floor(mins / 60), mins % 60), s = this.sun(ms);
+      if (s.alt > 2) times.push({ mins, s });
+    }
+    const S = F.map(f => times.map(({ s }) => {
+      const a = s.az * D2R, dot = f.nx * Math.sin(a) + f.ny * Math.cos(a);
+      if (dot < 0.08) return Infinity; // cephe güneşe dönük değil
+      return this.shadowLine(f.x, f.y, s);
+    }));
+    return { F, times, S, step, sunrise: times.length ? times[0].mins : null, sunset: times.length ? times[times.length - 1].mins : null };
+  };
+  // hours of sun for floor k on each facade + best
+  E.floorSun = function (id, prof, k) {
+    const z = this.floorZ(id, k), h = prof.step / 60;
+    const per = prof.F.map((f, i) => {
+      let c = 0, first = null, last = null;
+      prof.S[i].forEach((S, j) => { if (z > S) { c++; if (first === null) first = prof.times[j].mins; last = prof.times[j].mins; } });
+      return { az: f.az, len: f.len, hours: c * h, first, last };
+    });
+    let best = per.reduce((a, b) => (b.hours > (a ? a.hours : -1) ? b : a), null);
+    // any facade lit: union over time
+    let anyC = 0;
+    prof.times.forEach((_, j) => { if (prof.S.some((col, i) => z > col[j])) anyC++; });
+    return { per, best, any: anyC * h };
+  };
+
+  // sea view rays: for each facade, rays in ±78° every 2°; returns per-ray required eye height
+  // cap: bu yüksekliği aşan engel bulununca ışın kesilir (hiçbir kat göremez)
+  E.seaProfile = function (id) {
+    const F = this.facades(id), rays = [], range = this.seaRange, cap = this.B[id].top + 1;
+    for (const f of F) {
+      for (let da = -78; da <= 78; da += 2) {
+        const az = (f.az + da + 360) % 360, a = az * D2R, ux = Math.sin(a), uy = Math.cos(a);
+        const ts = this.firstSea(f.x, f.y, ux, uy, range);
+        if (!isFinite(ts)) continue;
+        let M = 0, step = ts > 3000 ? 30 : 15;
+        for (let t = 10; t < ts; t += step) { const g = this.farSurf(f.x + ux * t, f.y + uy * t, t); if (g > M) { M = g; if (M > cap) break; } }
+        if (M > cap) continue;
+        this._obstacles(f.x, f.y, ux, uy, ts, (t, top) => { top -= t * t * CURV; if (top > M) M = top; return M > cap; });
+        if (M > cap) continue;
+        rays.push({ az: Math.round(az / 2) * 2, need: M, dist: ts });
+      }
+    }
+    return rays;
+  };
+  E.floorSea = function (id, rays, k) {
+    const z = this.floorZ(id, k), bins = new Set();
+    let near = Infinity;
+    for (const r of rays) if (z > r.need + 0.3) { bins.add(r.az); if (r.dist < near) near = r.dist; }
+    const arr = [...bins].sort((a, b) => a - b);
+    // main direction: circular mean
+    let sx = 0, sy = 0; for (const a of arr) { sx += Math.sin(a * D2R); sy += Math.cos(a * D2R); }
+    const dir = arr.length ? ((Math.atan2(sx, sy) * R2D) + 360) % 360 : null;
+    return { deg: arr.length * 2, bins: arr, dir, near: isFinite(near) ? near : null };
+  };
+  // landmark line-of-sight
+  E.landmarks = function (id, k, list) {
+    const F = this.facades(id), z = this.floorZ(id, k), out = [];
+    for (const L of list) {
+      const [lx, ly] = this.P(L.lon, L.lat);
+      let ok = false, dist = null;
+      for (const f of F) {
+        const dx = lx - f.x, dy = ly - f.y, D = Math.hypot(dx, dy), ux = dx / D, uy = dy / D;
+        if (f.nx * ux + f.ny * uy < 0.2) continue;
+        const slope = (L.z - z) / D; let blocked = false;
+        for (let t = 10; t < D - 30; t += (D > 3000 ? 30 : 15)) { if (this.farSurf(f.x + ux * t, f.y + uy * t, t) > z + slope * t) { blocked = true; break; } }
+        if (!blocked) this._obstacles(f.x, f.y, ux, uy, D - 30, (t, top) => { if (top - t * t * CURV > z + slope * t) blocked = true; return blocked; });
+        if (!blocked) { ok = true; dist = D; break; }
+      }
+      if (ok) out.push({ name: L.name, dist });
+    }
+    return out;
+  };
+
+  // ground shadow hull for map (lon/lat ring)
+  E.shadowHull = function (id, sun) {
+    const b = this.B[id];
+    if (sun.alt <= 0.5) return null;
+    const len = Math.min(400, b.h / Math.tan(sun.alt * D2R)), a = sun.az * D2R;
+    const vx = -Math.sin(a) * len, vy = -Math.cos(a) * len;
+    const pts = [];
+    for (let k = 0; k < b.xs.length; k++) { pts.push([b.xs[k], b.ys[k]]); pts.push([b.xs[k] + vx, b.ys[k] + vy]); }
+    pts.sort((p, q) => p[0] - q[0] || p[1] - q[1]);
+    const cr = (o, a, b) => (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]);
+    const lo = [], up = [];
+    for (const p of pts) { while (lo.length >= 2 && cr(lo[lo.length - 2], lo[lo.length - 1], p) <= 0) lo.pop(); lo.push(p); }
+    for (let i = pts.length - 1; i >= 0; i--) { const p = pts[i]; while (up.length >= 2 && cr(up[up.length - 2], up[up.length - 1], p) <= 0) up.pop(); up.push(p); }
+    const hull = lo.slice(0, -1).concat(up.slice(0, -1)); hull.push(hull[0]);
+    return hull.map(([x, y]) => this.INV(x, y));
+  };
+
+  root.EvEngine = Engine;
+  if (typeof module !== 'undefined') module.exports = Engine;
+})(typeof window !== 'undefined' ? window : globalThis);
+</script>
+<script>
+(() => {
+const ALL_DISTRICTS = ['Adalar', 'Arnavutköy', 'Ataşehir', 'Avcılar', 'Bağcılar', 'Bahçelievler', 'Bakırköy', 'Başakşehir', 'Bayrampaşa', 'Beşiktaş', 'Beykoz', 'Beylikdüzü', 'Beyoğlu', 'Büyükçekmece', 'Çatalca', 'Çekmeköy', 'Esenler', 'Esenyurt', 'Eyüpsultan', 'Fatih', 'Gaziosmanpaşa', 'Güngören', 'Kadıköy', 'Kağıthane', 'Kartal', 'Küçükçekmece', 'Maltepe', 'Pendik', 'Sancaktepe', 'Sarıyer', 'Silivri', 'Sultanbeyli', 'Sultangazi', 'Şile', 'Şişli', 'Tuzla', 'Ümraniye', 'Üsküdar', 'Zeytinburnu'];
+const DISTRICTS = (window.EVINDEX || [{ key: 'kadikoy', name: 'Kadıköy', n: 6287 }, { key: 'umraniye', name: 'Ümraniye', n: 32283 }]);
+let DATA, PRE, eng, B, CEN, IDX = [];
+const store = {};
+async function loadData(key) {
+  if (store[key]) return store[key];
+  let d = window.EVEMBED && window.EVEMBED[key];
+  if (!d) { const r = await fetch('data/' + key + '.json'); if (!r.ok) throw new Error('Veri dosyası açılamadı: ' + key); d = await r.json(); }
+  if (d.wk) d.b.forEach(b => { const o = {}; d.wk.forEach((k, j) => { const m = b.w[2 * j]; if (m >= 0) o[k] = [m / 10, d.names[b.w[2 * j + 1]]]; }); b.w = o; });
+  const e = new EvEngine(d);
+  d.b.forEach((b, i) => { if (fixes[b.id]) { b.lv = fixes[b.id]; b.e = 2; const q = e.B[i]; q.lv = b.lv; q.h = b.lv * 3 + 0.8; q.top = q.g + q.h; } });
+  return store[key] = { d, e, cen: e.B.map(b => e.INV((b.minx + b.maxx) / 2, (b.miny + b.maxy) / 2)), idx: d.b.map((b, i) => ({ i, t: norm([b.a, b.nm].filter(Boolean).join(' ')) })).filter(x => x.t) };
+}
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const fmt1 = v => v.toLocaleString('tr-TR', { maximumFractionDigits: 1 });
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const DIRS = ['kuzey', 'kuzeydoğu', 'doğu', 'güneydoğu', 'güney', 'güneybatı', 'batı', 'kuzeybatı'];
+const dirName = az => DIRS[Math.round(((az % 360) + 360) % 360 / 45) % 8];
+const LOC = { 'kuzey': 'kuzeyde', 'kuzeydoğu': 'kuzeydoğuda', 'doğu': 'doğuda', 'güneydoğu': 'güneydoğuda', 'güney': 'güneyde', 'güneybatı': 'güneybatıda', 'batı': 'batıda', 'kuzeybatı': 'kuzeybatıda' };
+const hm = mins => String(Math.floor(mins / 60)).padStart(2, '0') + ':' + String(Math.round(mins % 60)).padStart(2, '0');
+const dur = h => { if (h <= 0) return 'güneş almıyor'; const H = Math.floor(h), M = Math.round((h - H) * 60); return (H ? H + ' sa' : '') + (M ? (H ? ' ' : '') + M + ' dk' : ''); };
+const kname = k => k === 0 ? 'Zemin kat' : k + '. kat';
+const GRADE = { 5: 'Pekiyi', 4: 'İyi', 3: 'Orta', 2: 'Geçer', 1: 'Zayıf' };
+const nowIst = new Date(Date.now() + 3 * 3600e3);
+const DATES = {
+  bugun: { label: 'Bugün', y: nowIst.getUTCFullYear(), m: nowIst.getUTCMonth() + 1, d: nowIst.getUTCDate() },
+  aralik: { label: '21 Aralık', y: 2026, m: 12, d: 21 },
+  mart: { label: '20 Mart', y: 2026, m: 3, d: 20 },
+  haziran: { label: '21 Haziran', y: 2026, m: 6, d: 21 }
+};
+
+// kullanıcı kat düzeltmeleri (yalnızca bu tarayıcıda)
+let fixes = {};
+try { fixes = JSON.parse(localStorage.getItem('evk-fixes') || '{}'); } catch (e) { fixes = {}; }
+function applyLevels(i, lv) {
+  B[i].lv = lv; const b = eng.B[i]; b.lv = lv; b.h = lv * 3 + 0.8; b.top = b.g + b.h; eng.maxTop = Math.max(eng.maxTop, b.top);
+}
+
+const S = {
+  sel: 0, sample: true, dist: 'kadikoy',
+  floor: 0, date: 'aralik', mins: 14 * 60, mode: 'golge', open: false
+};
+try { const h = location.hash.slice(1); const m = localStorage.getItem('evk-dist'); S.dist = DISTRICTS.some(x => x.key === h) ? h : (DISTRICTS.some(x => x.key === m) ? m : 'kadikoy'); } catch (e) {}
+try { const m = localStorage.getItem('evk-mode'); if (m) S.mode = m; } catch (e) {}
+
+// ---------- hesap önbelleği ----------
+const cache = new Map();
+function prof(i, key) {
+  const k = i + '|' + key; if (!cache.has(k)) { const d = DATES[key]; cache.set(k, eng.dayProfile(i, d.y, d.m, d.d, 15)); }
+  return cache.get(k);
+}
+const seaCache = new Map();
+function seaRays(i) { if (!seaCache.has(i)) seaCache.set(i, eng.seaProfile(i)); return seaCache.get(i); }
+
+// ---------- harita ----------
+const featB = () => ({ type: 'FeatureCollection', features: B.map((b, i) => ({ type: 'Feature', id: i, properties: { h: eng.B[i].h, sun: PRE[i][0], sea: PRE[i][1] }, geometry: { type: 'Polygon', coordinates: [b.r] } })) });
+const map = new maplibregl.Map({
+  container: 'map',
+  style: { version: 8, sources: {}, layers: [{ id: 'bg', type: 'background', paint: { 'background-color': css('--land') } }] },
+  center: [29.0262, 40.9842], zoom: 16.15, pitch: 58, bearing: -24, maxPitch: 75, attributionControl: false
+});
+map.addControl(new maplibregl.AttributionControl({ compact: true, customAttribution: '© OpenStreetMap katkıcıları, Copernicus DEM, İBB Açık Veri' }), 'bottom-right');
+
+function colors() {
+  return {
+    land: css('--land'), road: css('--road'), roadEdge: css('--road-edge'), park: css('--park'), sea: css('--sea'), bld: css('--bld'), shade: css('--shade'),
+    ink: css('--ink'), saffron: css('--saffron'), cobalt: css('--cobalt'),
+    sun: [css('--sun0'), css('--sun2'), css('--sun4'), css('--sun6'), css('--sun8')], sv0: css('--seaview0'), sv1: css('--seaview1'), sv2: css('--seaview2')
+  };
+}
+function bldColor(C) {
+  const sel = ['boolean', ['feature-state', 'sel'], false];
+  let base;
+  if (S.mode === 'gunes') base = ['interpolate', ['linear'], ['get', 'sun'], 0, C.sun[0], 2, C.sun[1], 4, C.sun[2], 6, C.sun[3], 8, C.sun[4]];
+  else if (S.mode === 'deniz') base = ['step', ['get', 'sea'], C.sv0, 2, C.sv1, 25, C.sv2];
+  else base = C.bld;
+  return ['case', sel, C.ink, base];
+}
+function paint() {
+  const C = colors();
+  map.setPaintProperty('bg', 'background-color', C.land);
+  map.setPaintProperty('sea', 'fill-color', C.sea);
+  map.setPaintProperty('green', 'fill-color', C.park);
+  map.setPaintProperty('roads-major', 'line-color', C.road);
+  map.setPaintProperty('roads-minor', 'line-color', C.road);
+  map.setPaintProperty('paths', 'line-color', C.roadEdge);
+  map.setPaintProperty('shadows', 'fill-color', C.shade);
+  map.setPaintProperty('bld', 'fill-extrusion-color', bldColor(C));
+  map.setPaintProperty('slab', 'fill-extrusion-color', C.saffron);
+  map.setPaintProperty('border', 'line-color', C.ink);
+}
+function lineFC(cls) {
+  return { type: 'FeatureCollection', features: DATA.roads.filter(r => cls.includes(r.c)).map(r => ({ type: 'Feature', properties: {}, geometry: { type: 'LineString', coordinates: r.g } })) };
+}
+let ready = false;
+function pad() { map.setPadding(innerWidth <= 760 ? { top: 150, bottom: Math.round(innerHeight * .46), left: 0, right: 0 } : { left: 430, top: 60, bottom: 90, right: 0 }); }
+addEventListener('resize', pad);
+const EMPTY = { type: 'FeatureCollection', features: [] };
+let markers = [];
+map.on('load', () => {
+  ready = true; pad();
+  const C = colors();
+  ['sea', 'green', 'rmaj', 'rmin', 'rpath', 'shadows', 'bld', 'slab', 'border'].forEach(id => map.addSource(id, { type: 'geojson', data: EMPTY }));
+  map.addLayer({ id: 'sea', type: 'fill', source: 'sea', paint: { 'fill-color': C.sea } });
+  map.addLayer({ id: 'green', type: 'fill', source: 'green', paint: { 'fill-color': C.park } });
+  map.addLayer({ id: 'paths', type: 'line', source: 'rpath', minzoom: 14.5, paint: { 'line-color': C.roadEdge, 'line-width': ['interpolate', ['linear'], ['zoom'], 15, .5, 18, 2] } });
+  map.addLayer({ id: 'roads-minor', type: 'line', source: 'rmin', layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': C.road, 'line-width': ['interpolate', ['linear'], ['zoom'], 12, .5, 16, 4, 18, 12] } });
+  map.addLayer({ id: 'roads-major', type: 'line', source: 'rmaj', layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': C.road, 'line-width': ['interpolate', ['linear'], ['zoom'], 12, 1.5, 16, 7, 18, 20] } });
+  map.addLayer({ id: 'border', type: 'line', source: 'border', paint: { 'line-color': C.ink, 'line-width': 2, 'line-opacity': .55, 'line-dasharray': [3, 2] } });
+  map.addLayer({ id: 'shadows', type: 'fill', source: 'shadows', paint: { 'fill-color': C.shade, 'fill-opacity': .8 } });
+  map.addLayer({ id: 'bld', type: 'fill-extrusion', source: 'bld', paint: { 'fill-extrusion-color': bldColor(C), 'fill-extrusion-height': ['get', 'h'], 'fill-extrusion-base': 0, 'fill-extrusion-opacity': .96, 'fill-extrusion-vertical-gradient': true } });
+  map.addLayer({ id: 'slab', type: 'fill-extrusion', source: 'slab', paint: { 'fill-extrusion-color': C.saffron, 'fill-extrusion-height': ['get', 'top'], 'fill-extrusion-base': ['get', 'base'], 'fill-extrusion-opacity': 1 } });
+  map.on('moveend', () => updateSun());
+  map.on('click', 'bld', e => { const f = e.features[0]; if (f) select(f.id, { fly: false }); });
+  map.on('mouseenter', 'bld', () => map.getCanvas().style.cursor = 'pointer');
+  map.on('mouseleave', 'bld', () => map.getCanvas().style.cursor = '');
+  setMode(S.mode);
+  activate(S.dist);
+});
+
+async function activate(key) {
+  renderDists(key);
+  $('#loading').textContent = DISTRICTS.find(x => x.key === key).name + ' yükleniyor';
+  $('#loading').hidden = false;
+  let st;
+  try { st = await loadData(key); }
+  catch (err) { $('#loading').textContent = err.message + '. Sayfayı yenileyip tekrar dene.'; return; }
+  $('#loading').hidden = true;
+  if (playing) { cancelAnimationFrame(playing); playing = 0; $('#play-ic').setAttribute('d', 'M4 2.5v11l9-5.5z'); }
+  S.dist = key; try { localStorage.setItem('evk-dist', key); history.replaceState(null, '', '#' + key); } catch (e) {}
+  DATA = st.d; eng = st.e; B = DATA.b; PRE = DATA.pre; CEN = st.cen; IDX = st.idx;
+  cache.clear(); seaCache.clear(); prevSel = null; hits = []; $('#results').hidden = true; $('#q').value = '';
+  map.setMaxBounds(null);
+  map.getSource('sea').setData({ type: 'FeatureCollection', features: DATA.sea.map(r => ({ type: 'Feature', properties: {}, geometry: { type: 'Polygon', coordinates: [r] } })) });
+  map.getSource('green').setData({ type: 'FeatureCollection', features: DATA.green.map(g => ({ type: 'Feature', properties: {}, geometry: { type: 'Polygon', coordinates: [g.g] } })) });
+  map.getSource('rmaj').setData(lineFC(['major'])); map.getSource('rmin').setData(lineFC(['minor'])); map.getSource('rpath').setData(lineFC(['path']));
+  map.getSource('bld').setData(featB());
+  map.getSource('border').setData({ type: 'FeatureCollection', features: (DATA.border || []).map(r => ({ type: 'Feature', properties: {}, geometry: { type: 'LineString', coordinates: r } })) });
+  markers.forEach(m => m.remove()); markers = [];
+  const seen = new Set(), placed = [];
+  const near = (a, b) => Math.hypot((a[0] - b[0]) * 84000, (a[1] - b[1]) * 111000) < 220;
+  DATA.stations.forEach(s => {
+    const label = s.n.replace(/ \(.*\)/, '');
+    if (seen.has(label) || placed.some(q => near(q, s.xy))) return; seen.add(label); placed.push(s.xy);
+    const el = document.createElement('div'); el.className = 'pin' + (s.k === 'ferry' ? ' ferry' : '');
+    el.innerHTML = '<i></i>' + esc(label);
+    markers.push(new maplibregl.Marker({ element: el, anchor: 'bottom', offset: [0, -6] }).setLngLat(s.xy).addTo(map));
+  });
+  (DATA.places || []).forEach(([n, lo, la]) => {
+    const el = document.createElement('div'); el.className = 'place'; el.textContent = n;
+    markers.push(new maplibregl.Marker({ element: el }).setLngLat([lo, la]).addTo(map));
+  });
+  S.sel = Math.max(0, B.findIndex(b => b.id === DATA.sampleId)); S.sample = true;
+  const b0 = eng.B[S.sel];
+  map.jumpTo({ center: eng.INV((b0.minx + b0.maxx) / 2, (b0.miny + b0.maxy) / 2), zoom: 16.15, bearing: DATA.key === 'kadikoy' ? -24 : -10, pitch: 58 });
+  map.setMaxBounds(DATA.bounds);
+  select(S.sel, { fly: false, keepSample: true });
+  $('#legend').innerHTML = LEG[S.mode]();
+  updateSun();
+}
+function renderDists(key) {
+  const cur = DISTRICTS.find(x => x.key === key);
+  $('#distName').textContent = cur ? cur.name : 'İlçe seç';
+  const byName = Object.fromEntries(DISTRICTS.map(x => [x.name, x]));
+  $('#distPop').innerHTML = `<h3>İlçe seç</h3><p>${DISTRICTS.length} ilçe hazır, diğerleri sırayla ekleniyor.</p><div class="distgrid">` +
+    ALL_DISTRICTS.map(n => { const d = byName[n]; return d ? `<button data-dist="${d.key}" aria-current="${d.key === key}">${n}<small class="num">${d.n.toLocaleString('tr-TR')} bina</small></button>` : `<button disabled>${n}<small>sırada</small></button>`; }).join('') + '</div>';
+}
+function togglePop(open) { $('#distPop').hidden = !open; $('#distBtn').setAttribute('aria-expanded', open); }
+$('#distBtn').addEventListener('click', e => { e.stopPropagation(); togglePop($('#distPop').hidden); });
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-dist]');
+  if (b) { togglePop(false); if (b.dataset.dist !== S.dist) activate(b.dataset.dist); return; }
+  if (!e.target.closest('#distPop')) togglePop(false);
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') togglePop(false); });
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { if (ready) paint(); });
+new MutationObserver(() => { if (ready) paint(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+let prevSel = null;
+function slabFC() {
+  const i = S.sel, b = eng.B[i], k = S.floor;
+  const cx = (b.minx + b.maxx) / 2, cy = (b.miny + b.maxy) / 2;
+  const ring = b.xs.map((x, j) => {
+    const dx = x - cx, dy = b.ys[j] - cy, r = Math.hypot(dx, dy) || 1, f = (r + .9) / r;
+    return eng.INV(cx + dx * f, cy + dy * f);
+  }); ring.push(ring[0]);
+  return { type: 'FeatureCollection', features: [{ type: 'Feature', properties: { base: k * 3 + .3, top: k * 3 + 3 }, geometry: { type: 'Polygon', coordinates: [ring] } }] };
+}
+
+// ---------- güneş & gölge ----------
+function sunNow() { const d = DATES[S.date]; return eng.sun(EvEngine.localMs(d.y, d.m, d.d, Math.floor(S.mins / 60), S.mins % 60)); }
+let raf = 0;
+function updateSun() {
+  if (raf) return;
+  raf = requestAnimationFrame(() => {
+    raf = 0;
+    const s = sunNow();
+    $('#clock').textContent = hm(S.mins);
+    $('#sunread').textContent = s.alt > 0 ? `güneş ${Math.round(s.alt)}°, ${LOC[dirName(s.az)]}` : 'güneş ufkun altında';
+    $('#t').value = S.mins;
+    if (!ready) return;
+    const feats = [];
+    if (s.alt > 0.5) {
+      const bd = map.getBounds(), pad = .004, w = bd.getWest() - pad, e = bd.getEast() + pad, so = bd.getSouth() - pad, n = bd.getNorth() + pad;
+      for (let i = 0; i < eng.B.length; i++) {
+        const c = CEN[i]; if (c[0] < w || c[0] > e || c[1] < so || c[1] > n) continue;
+        const r = eng.shadowHull(i, s); if (r) feats.push({ type: 'Feature', properties: {}, geometry: { type: 'Polygon', coordinates: [r] } });
+      }
+    }
+    map.getSource('shadows').setData({ type: 'FeatureCollection', features: feats });
+    map.setLight({ anchor: 'map', position: [1.4, s.az, Math.min(88, Math.max(10, 90 - s.alt))], color: s.alt > 0 ? '#FFFAF0' : '#9AA4D6', intensity: s.alt > 0 ? .42 : .2 });
+    const m = document.querySelector('#strip-now'); if (m) { const x = (S.mins - 300) / 960 * 320; m.setAttribute('x1', x); m.setAttribute('x2', x); }
+  });
+}
+$('#t').addEventListener('input', e => { S.mins = +e.target.value; updateSun(); });
+let playing = 0;
+$('#play').addEventListener('click', () => {
+  if (playing) { cancelAnimationFrame(playing); playing = 0; $('#play-ic').setAttribute('d', 'M4 2.5v11l9-5.5z'); return; }
+  if (S.mins >= 1250) S.mins = 330;
+  $('#play-ic').setAttribute('d', 'M4 2.5h3v11H4zM9 2.5h3v11H9z');
+  const step = () => { S.mins = Math.min(1260, S.mins + 3); updateSun(); if (S.mins < 1260) playing = requestAnimationFrame(step); else { playing = 0; $('#play-ic').setAttribute('d', 'M4 2.5v11l9-5.5z'); } };
+  playing = requestAnimationFrame(step);
+});
+function renderDates() {
+  $('#dates').innerHTML = Object.entries(DATES).map(([k, d]) => `<button data-date="${k}" aria-pressed="${S.date === k}">${d.label}</button>`).join('');
+}
+function setDate(k) { S.date = k; renderDates(); updateSun(); renderPanel(); }
+document.addEventListener('click', e => { const b = e.target.closest('[data-date]'); if (b) setDate(b.dataset.date); });
+
+// ---------- modlar ----------
+const LEG = {
+  golge: () => 'Seçili saatte yere düşen gölgeler. Alttaki şeritten tarihi ve saati değiştir.',
+  gunes: () => `<div>21 Aralık, orta kat, en çok güneş alan cephe</div><div class="ramp"></div><div class="ends num"><span>0 sa</span><span>4 sa</span><span>8 sa ve üstü</span></div>`,
+  deniz: () => `<div>En üst kattan denizin görüldüğü açı${DATA && DATA.seaRange > 5000 ? '. Uzak görünümler yaklaşıktır.' : ''}</div><div class="sw"><span><i style="background:var(--seaview0)"></i>Görmez</span><span><i style="background:var(--seaview1)"></i>25°'ye kadar</span><span><i style="background:var(--seaview2)"></i>25° ve üstü</span></div>`
+};
+function setMode(m) {
+  S.mode = m; try { localStorage.setItem('evk-mode', m); } catch (e) {}
+  document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', b.dataset.mode === m));
+  $('#legend').innerHTML = LEG[m]();
+  if (ready) { map.setPaintProperty('bld', 'fill-extrusion-color', bldColor(colors())); map.setLayoutProperty('shadows', 'visibility', m === 'golge' ? 'visible' : 'none'); }
+}
+document.querySelectorAll('[data-mode]').forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode)));
+
+// ---------- seçim ----------
+function select(i, opt = {}) {
+  if (prevSel !== null) map.setFeatureState({ source: 'bld', id: prevSel }, { sel: false });
+  S.sel = i; prevSel = i; if (!opt.keepSample) S.sample = false;
+  map.setFeatureState({ source: 'bld', id: i }, { sel: true });
+  const lv = B[i].lv;
+  S.floor = Math.min(lv - 1, Math.max(0, Math.floor((lv - 1) / 2)));
+  if (opt.fly) { const b = eng.B[i]; map.easeTo({ center: eng.INV((b.minx + b.maxx) / 2, (b.miny + b.maxy) / 2), zoom: Math.max(map.getZoom(), 16.6), duration: 900 }); }
+  renderPanel();
+  if (innerWidth <= 760 && !opt.keepSample) { S.open = false; $('#sheet').classList.remove('open'); }
+}
+function setFloor(k) { S.floor = k; renderPanel(); }
+function setLevels(n) {
+  const i = S.sel; n = Math.max(1, Math.min(40, n));
+  applyLevels(i, n); B[i].e = 2; fixes[B[i].id] = n;
+  try { localStorage.setItem('evk-fixes', JSON.stringify(fixes)); } catch (e) {}
+  cache.clear(); seaCache.clear();
+  const p = eng.dayProfile(i, 2026, 12, 21, 20); PRE[i] = [eng.floorSun(i, p, Math.floor((n - 1) / 2)).any, eng.floorSea(i, eng.seaProfile(i), n - 1).deg];
+  map.getSource('bld').setData(featB());
+  map.setFeatureState({ source: 'bld', id: i }, { sel: true });
+  S.floor = Math.min(S.floor, n - 1);
+  renderPanel(); updateSun();
+}
+
+// ---------- notlar ----------
+function gSun(h) { return h >= 6 ? 5 : h >= 4 ? 4 : h >= 2.5 ? 3 : h >= 1 ? 2 : 1; }
+function gSea(d, near) { const g = d >= 60 ? 5 : d >= 25 ? 4 : d >= 8 ? 3 : d > 0 ? 2 : 1; return near && near > 3000 ? Math.min(g, 3) : g; }
+function gTransit(m) { return m <= 5 ? 5 : m <= 9 ? 4 : m <= 14 ? 3 : m <= 20 ? 2 : 1; }
+function gDaily(m) { return m <= 3 ? 5 : m <= 5 ? 4 : m <= 8 ? 3 : m <= 12 ? 2 : 1; }
+function gQuake(r) { return r < 1.5 ? 5 : r < 2.2 ? 4 : r < 3.5 ? 3 : r < 5 ? 2 : 1; }
+const gradeBox = g => `<div class="grade g${g}"><strong>${g}</strong><small>${GRADE[g]}</small></div>`;
+
+function sunColor(h) {
+  const C = colors().sun, t = Math.min(h, 8) / 2, i = Math.min(3, Math.floor(t)), f = t - i;
+  const p = c => [1, 3, 5].map(j => parseInt(c.slice(j, j + 2), 16));
+  const a = p(C[i]), b = p(C[i + 1]);
+  return `rgb(${a.map((v, j) => Math.round(v + (b[j] - v) * f)).join(',')})`;
+}
+
+function stripSVG(i, P, k) {
+  const z = eng.floorZ(i, k), w = 320, x = m => (m - 300) / 960 * w, cw = P.step / 960 * w;
+  let r = `<rect x="0" y="0" width="${w}" height="26" rx="6" fill="var(--night)"/>`;
+  P.times.forEach((t, j) => {
+    const lit = P.S.some(col => z > col[j]);
+    r += `<rect x="${x(t.mins).toFixed(2)}" y="0" width="${(cw + .3).toFixed(2)}" height="26" fill="${lit ? 'var(--saffron)' : 'var(--strip-shade)'}"/>`;
+  });
+  const nx = x(S.mins);
+  r += `<line id="strip-now" x1="${nx}" x2="${nx}" y1="-3" y2="29" stroke="var(--ink)" stroke-width="2"/>`;
+  return `<svg class="strip" viewBox="0 -3 ${w} 32" role="img" aria-label="Gün boyunca güneş alma şeridi">${r}</svg>`;
+}
+function compassSVG(per) {
+  const c = 56, R = 42, pt = (az, r) => [c + r * Math.sin(az * Math.PI / 180), c - r * Math.cos(az * Math.PI / 180)];
+  let s = `<circle cx="${c}" cy="${c}" r="${R}" fill="none" stroke="var(--line)" stroke-width="10"/>`;
+  per.forEach(f => {
+    const a0 = f.az - 16, a1 = f.az + 16, [x0, y0] = pt(a0, R), [x1, y1] = pt(a1, R);
+    s += `<path d="M${x0.toFixed(1)} ${y0.toFixed(1)} A${R} ${R} 0 0 1 ${x1.toFixed(1)} ${y1.toFixed(1)}" fill="none" stroke="${f.hours > 0 ? sunColor(f.hours) : 'var(--strip-shade)'}" stroke-width="10"/>`;
+  });
+  s += `<text x="${c}" y="10" text-anchor="middle">K</text><text x="${c}" y="${2 * c - 2}" text-anchor="middle">G</text><text x="${2 * c - 4}" y="${c + 3.5}" text-anchor="middle">D</text><text x="4" y="${c + 3.5}" text-anchor="middle">B</text>`;
+  s += `<rect x="${c - 9}" y="${c - 9}" width="18" height="18" rx="3" fill="var(--ink)"/>`;
+  return `<svg class="compass" viewBox="0 0 ${2 * c} ${2 * c}" role="img" aria-label="Cephelere göre güneş">${s}</svg>`;
+}
+function seaSVG(bins) {
+  const c = 56, R = 44, pt = (az, r) => [c + r * Math.sin(az * Math.PI / 180), c - r * Math.cos(az * Math.PI / 180)];
+  let s = `<circle cx="${c}" cy="${c}" r="${R}" fill="var(--surface-2)"/>`;
+  // ardışık kutuları birleştir
+  const runs = []; bins.forEach(a => { const l = runs[runs.length - 1]; if (l && a - l[1] <= 2) l[1] = a; else runs.push([a, a]); });
+  if (runs.length > 1 && runs[0][0] === 0 && runs[runs.length - 1][1] === 358) { runs[0][0] = runs[runs.length - 1][0] - 360; runs.pop(); }
+  runs.forEach(([a, b]) => {
+    const [x0, y0] = pt(a - 1, R), [x1, y1] = pt(b + 1, R), large = (b - a + 2) > 180 ? 1 : 0;
+    s += `<path d="M${c} ${c}L${x0.toFixed(1)} ${y0.toFixed(1)}A${R} ${R} 0 ${large} 1 ${x1.toFixed(1)} ${y1.toFixed(1)}Z" fill="var(--cobalt)"/>`;
+  });
+  s += `<text x="${c}" y="10" text-anchor="middle">K</text><rect x="${c - 7}" y="${c - 7}" width="14" height="14" rx="3" fill="var(--ink)"/>`;
+  return `<svg class="compass" viewBox="0 0 ${2 * c} ${2 * c}" role="img" aria-label="Denizin görüldüğü yönler">${s}</svg>`;
+}
+
+function renderPanel() {
+  const i = S.sel, b = B[i], k = S.floor, lv = b.lv;
+  const P = prof(i, S.date), PW = prof(i, 'aralik');
+  const rays = seaRays(i);
+  const fsNow = eng.floorSun(i, P, k), fsW = eng.floorSun(i, PW, k), sea = eng.floorSea(i, rays, k);
+  const lms = eng.landmarks(i, k, DATA.landmarks || []);
+  const ms = DATA.mah[b.m];
+  const w = b.w || {};
+  // kat kesiti
+  const dayLen = P.times.length * P.step / 60 || 1;
+  const fh = Math.max(13, Math.min(26, Math.floor(230 / lv)));
+  let floorsHTML = '';
+  for (let f = lv - 1; f >= 0; f--) {
+    const h = eng.floorSun(i, P, f).any, sd = eng.floorSea(i, rays, f).deg;
+    floorsHTML += `<button class="floor" style="--fh:${fh}px;--w:${Math.max(3, h / dayLen * 100).toFixed(1)}%;--c:${sunColor(h)}" aria-pressed="${f === k}" data-floor="${f}" aria-label="${kname(f)}: ${dur(h)} güneş${sd > 0 ? ', deniz görür' : ''}">
+      <span class="lab num">${fh >= 15 || f === 0 || f === k || f % 5 === 0 ? (f === 0 ? 'Z' : f) : ''}</span><span class="track"><span class="bar"></span>${sd > 0 ? `<svg class="wave" viewBox="0 0 16 8" aria-hidden="true"><path d="M1 5c2-3 3-3 5 0s3 3 5 0 3-3 4 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>` : ''}</span></button>`;
+  }
+  // notlar
+  const gs = gSun(fsW.any), gv = gSea(sea.deg, sea.near);
+  const tr = Math.min(w.rail ? w.rail[0] : 99, w.ferry ? w.ferry[0] : 99);
+  const gt = gTransit(tr);
+  const dl = ['market', 'pharmacy', 'park'].map(c => w[c] ? w[c][0] : 20);
+  const gd = gDaily(dl.reduce((a, c) => a + c, 0) / 3);
+  const gq = ms ? gQuake(ms.ratio) : 3;
+  const grades = [gs, gv, gt, gd, gq], avg = grades.reduce((a, c) => a + c, 0) / 5;
+  const belge = avg >= 4.25 ? ['takdir', 'Takdir belgesi aldı'] : avg >= 3.5 ? ['tesekkur', 'Teşekkür belgesi aldı'] : ['', 'Belge yok, sınıfı geçti'];
+  const bestW = fsW.best;
+  const lit = P.S.length ? P.times.filter((t, j) => P.S.some(col => eng.floorZ(i, k) > col[j])) : [];
+  const title = b.a || b.nm || (b.nr ? b.nr + ' üzerinde' : 'Adı kayıtlı olmayan bina');
+  const srcTxt = b.e === 2 ? 'Kat sayısını sen düzelttin' : b.e === 1 ? `Tahmini kat sayısı (%${DATA.acc.pm1} ihtimalle ±1 kat), düzeltebilirsin` : 'Kat sayısı OSM kaydından';
+  const walkRows = [
+    ['rail', 'Raylı sistem'], ['ferry', 'Vapur'], ['tram', 'Nostaljik tramvay'], ['market', 'Market veya fırın'],
+    ['pharmacy', 'Eczane'], ['school', 'Okul veya kreş'], ['park', 'Park'], ['hospital', 'Sağlık kuruluşu']
+  ].filter(([c]) => w[c]).map(([c, l]) => `<li><div>${l}${w[c][1] && !['Park', 'Okul', 'Eczane', 'Market', 'Fırın', 'Hastane'].includes(w[c][1]) ? `<small>${esc(w[c][1])}</small>` : ''}</div><div class="min num">${Math.max(1, Math.round(w[c][0]))}<span>dk</span></div></li>`).join('');
+  const seaTxt = sea.deg > 0 ? `${sea.deg}° açıyla, ${dirName(sea.dir)} yönünde` : 'Görmüyor';
+  const ageTot = ms ? ms.total : 1;
+
+  $('#panel').innerHTML = `
+  <div class="head">
+    <div class="where">${esc(b.m ? b.m + ' Mahallesi, ' + DATA.name : DATA.name)}</div>
+    <h1>${esc(title)}</h1>
+    ${S.sample ? `<div class="sample">Örnek bina. Haritada istediğin binaya dokun ya da yukarıdan adres ara.</div>` : ''}
+    <div class="kat-row">
+      <div class="stepper"><button id="lv-minus" aria-label="Kat sayısını azalt">−</button><output class="num" id="lv-out">${lv} katlı</output><button id="lv-plus" aria-label="Kat sayısını artır">+</button></div>
+      <span class="src ${b.e === 1 ? 'est' : ''}">${srcTxt}</span>
+    </div>
+    <div class="src src-line">Bina tabanı OpenStreetMap'ten${b.y ? `, son düzenleme ${b.y}` : ''}${b.y && b.y < 2020 ? '. Bina o tarihten sonra yenilendiyse kat sayısını düzelt.' : ''}</div>
+  </div>
+
+  <div class="kesit">
+    <div><div class="floors" role="group" aria-label="Kat seç">${floorsHTML}</div><div class="ground-line"></div></div>
+    <div class="fsum">
+      <div class="kname">${kname(k)}</div>
+      <dl>
+        <div><dt>${DATES[S.date].label} güneş</dt><dd class="num">${dur(fsNow.any)}</dd></div>
+        <div><dt>Deniz</dt><dd>${seaTxt}</dd></div>
+      </dl>
+    </div>
+    <div class="kesit-note">Çubuk uzunluğu o katın ${S.date === 'bugun' ? 'bugün' : DATES[S.date].label + ' günü'} aldığı güneş. Dalga işareti denizi gören katlar.</div>
+  </div>
+
+  <section class="sec">
+    <h2>Karne</h2>
+    <p class="sub">${kname(k)} için, beş ders üzerinden</p>
+    <div class="karne">
+      <div class="krow"><div><b>Kış güneşi</b><span>21 Aralık'ta ${dur(fsW.any)}${bestW && bestW.hours > 0 ? `, en çok ${dirName(bestW.az)} cepheden` : ''}</span></div>${gradeBox(gs)}</div>
+      <div class="krow"><div><b>Deniz manzarası</b><span>${sea.deg > 0 ? `Denizi ${sea.deg}° açıyla görür${sea.near > 3000 ? ' (uzaktan, yaklaşık)' : ''}${lms.length ? ', ' + esc(lms[0].name) + ' dahil' : ''}` : 'Bu kattan deniz görünmüyor'}</span></div>${gradeBox(gv)}</div>
+      <div class="krow"><div><b>Ulaşım</b><span>${w.rail ? `Raylı sisteme ${Math.round(w.rail[0])} dk` : 'Raylı sistem uzak'}${w.ferry ? `, iskeleye ${Math.round(w.ferry[0])} dk yürüme` : ''}</span></div>${gradeBox(gt)}</div>
+      <div class="krow"><div><b>Gündelik ihtiyaç</b><span>Market ${Math.round(dl[0])} dk, eczane ${Math.round(dl[1])} dk, park ${Math.round(dl[2])} dk</span></div>${gradeBox(gd)}</div>
+      <div class="krow"><div><b>Deprem riski</b><span>${ms ? `Mahallede ağır hasar beklenen bina oranı %${fmt1(ms.ratio)}` : 'Mahalle verisi yok'}</span></div>${gradeBox(gq)}</div>
+    </div>
+    <div class="avg"><div><div class="n num">${fmt1(avg)}</div></div><div class="belge ${belge[0]}">${belge[1]}<small>5 üzerinden ortalama</small></div></div>
+  </section>
+
+  <section class="sec">
+    <h2>Güneş</h2>
+    <p class="sub">Doğrudan güneş, komşu binaların ve yamacın gölgesi hesaba katılarak</p>
+    <div class="tabs" role="group" aria-label="Tarih">${Object.entries(DATES).map(([kk, d]) => `<button data-date="${kk}" aria-pressed="${S.date === kk}">${d.label}</button>`).join('')}</div>
+    ${stripSVG(i, P, k)}
+    <div class="strip-ticks num"><span>05</span><span>09</span><span>13</span><span>17</span><span>21</span></div>
+    <div class="keys"><span><i style="background:var(--saffron)"></i>Güneş alıyor</span><span><i style="background:var(--strip-shade)"></i>Gölgede</span><span><i style="background:var(--night)"></i>Güneş yok</span></div>
+    <div class="sunline">
+      ${compassSVG(fsNow.per)}
+      <div class="facts">
+        <div>Toplam <strong class="num">${dur(fsNow.any)}</strong>${P.times.length ? ` (gün ışığı ${dur(P.times.length * P.step / 60)})` : ''}</div>
+        ${lit.length ? `<div>İlk güneş <strong class="num">${hm(lit[0].mins)}</strong>, son güneş <strong class="num">${hm(lit[lit.length - 1].mins + P.step)}</strong></div>` : '<div>Bu tarihte bu kata doğrudan güneş düşmüyor.</div>'}
+        ${fsNow.best && fsNow.best.hours > 0 ? `<div>En aydınlık cephe <strong>${dirName(fsNow.best.az)}</strong>, ${dur(fsNow.best.hours)}</div>` : ''}
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Manzara</h2>
+    <p class="sub">Pencereden ufka bakış, binalar ve arazi engel olarak sayıldı</p>
+    <div class="sunline">
+      ${seaSVG(sea.bins)}
+      <div class="facts">
+        ${sea.deg > 0 ? `<div>Deniz <strong>${sea.deg}°</strong> açıyla, ağırlıklı olarak <strong>${dirName(sea.dir)}</strong> yönünde</div><div>En yakın kıyı <strong class="num">${sea.near > 3000 ? fmt1(sea.near / 1000) + ' km' : Math.round(sea.near / 10) * 10 + ' m'}</strong></div>${sea.near > 3000 ? `<div>Uzak görünüm. İlçe dışındaki binalar uydu yüzey modeliyle yaklaşık hesaplandı, gerçekte daha az görünebilir. Bu yüzden not en fazla 3.</div>` : ''}` : `<div>Bu kattan deniz görünmüyor.${(() => { for (let f = k + 1; f < lv; f++) if (eng.floorSea(i, rays, f).deg > 0) return ` <strong>${kname(f)}</strong> ve üstü denizi görüyor.`; return ''; })()}</div>`}
+      </div>
+    </div>
+    <div class="chips">${lms.length ? lms.map(l => `<span class="chip on">${esc(l.name)}</span>`).join('') : '<span class="chip">Görüş hattında simge yapı yok</span>'}</div>
+  </section>
+
+  <section class="sec">
+    <h2>Yürüme mesafesi</h2>
+    <p class="sub">Sokak ağı üzerinden, dakikada 80 metre</p>
+    <ul class="walk">${walkRows}</ul>
+  </section>
+
+  <section class="sec">
+    <h2>Deprem</h2>
+    <p class="sub">Mahalle düzeyinde. Bu binaya özel bir değerlendirme değil.</p>
+    ${ms ? `
+    <div class="big-stat"><strong class="num">%${fmt1(ms.ratio)}</strong><span>bina ağır veya çok ağır hasar görüyor</span></div>
+    <p class="note" style="margin-top:4px">İBB'nin Mw 7,5 gece senaryosunda ${esc(b.m)} için. İstanbul'daki mahallelerin ortancası %${fmt1(DATA.ist_median)}.</p>
+    <div class="age"><i style="width:${ms.pre80 / ageTot * 100}%;background:var(--g1)"></i><i style="width:${ms.y80_00 / ageTot * 100}%;background:var(--g3)"></i><i style="width:${ms.post00 / ageTot * 100}%;background:var(--g4)"></i></div>
+    <div class="agekeys num"><span>1980 öncesi %${Math.round(ms.pre80 / ageTot * 100)}</span><span>1980–2000 %${Math.round(ms.y80_00 / ageTot * 100)}</span><span>2000 sonrası %${Math.round(ms.post00 / ageTot * 100)}</span></div>
+    <p class="note">Binanın kendi yapım yılı ve zemin etüdü için belediyeye ya da bir uzmana başvur. En yakın toplanma alanını e-Devlet'teki AFAD Acil Toplanma Alanı sorgusundan öğrenebilirsin.</p>` : '<p class="note">Bu mahalle için senaryo verisi bulunamadı.</p>'}
+  </section>
+
+  <div class="about">
+    <p><strong>Nasıl hesaplandı?</strong> Bina tabanları ve kat sayıları OpenStreetMap'ten, arazi yüksekliği Copernicus GLO-30'dan. Her cephe ve her 15 dakika için güneşe doğru ışın gönderilip önündeki bina ve yamaçlar kontrol edildi. ${esc(DATA.acc.note)} Kat sayısı kayıtlı ${DATA.acc.n.toLocaleString('tr-TR')} binada test edildiğinde tahmin %${DATA.acc.exact} tam isabet, %${DATA.acc.pm1} ±1 kat içinde. Kat yüksekliği 3 m kabul edildi.</p>
+    ${ms && ms.osm ? `<p><strong>Veri ne kadar eksiksiz?</strong> ${esc(b.m)} için OpenStreetMap'te ${ms.osm.toLocaleString('tr-TR')} bina var. İBB'nin 2017 MAKS sayımında ${ms.total.toLocaleString('tr-TR')} bina görünüyor (%${Math.round(ms.osm / ms.total * 100)}). Fark, kayıt eksikliğinden ya da 2017'den sonra yıkılıp birleştirilen parsellerden kaynaklanabilir.</p>` : ''}
+    <p>Deprem ve bina yaşı: İBB Açık Veri Portalı (Deprem Senaryosu Analiz Sonuçları, 2017 Mahalle Bazlı Bina Sayıları).</p>
+    <p>Bu bir ön inceleme aracıdır, ekspertiz ya da zemin etüdünün yerine geçmez.</p>
+  </div>`;
+
+  $('#panel').querySelectorAll('[data-floor]').forEach(el => el.addEventListener('click', () => setFloor(+el.dataset.floor)));
+  $('#lv-minus').onclick = () => setLevels(lv - 1);
+  $('#lv-plus').onclick = () => setLevels(lv + 1);
+  if (ready) map.getSource('slab').setData(slabFC());
+}
+
+// ---------- arama ----------
+const norm = s => (s || '').toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\u0131/g, 'i').replace(/\s+/g, ' ');
+let hits = [], hi = 0;
+function search(q) {
+  const n = norm(q).trim(); const box = $('#results');
+  if (n.length < 2) { box.hidden = true; return; }
+  const parts = n.split(' ');
+  hits = IDX.filter(x => parts.every(p => x.t.includes(p))).slice(0, 7); hi = 0;
+  box.innerHTML = hits.length ? hits.map((h, j) => `<button data-hit="${j}" class="${j === 0 ? 'on' : ''}">${esc(B[h.i].a || B[h.i].nm)}<small>${esc(B[h.i].m || '')} Mahallesi</small></button>`).join('') : '<div style="padding:10px 12px;color:var(--ink-3);font-size:13.5px">Bu adla kayıtlı bina yok. Sokak adını kısaltıp tekrar dene.</div>';
+  box.hidden = false;
+}
+function pick(j) { const h = hits[j]; if (!h) return; $('#results').hidden = true; $('#q').value = B[h.i].a || B[h.i].nm; select(h.i, { fly: true }); }
+$('#q').addEventListener('input', e => search(e.target.value));
+$('#q').addEventListener('keydown', e => {
+  if (e.key === 'Enter') { pick(hi); e.preventDefault(); }
+  if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+    hi = Math.max(0, Math.min(hits.length - 1, hi + (e.key === 'ArrowDown' ? 1 : -1)));
+    document.querySelectorAll('[data-hit]').forEach((b, j) => b.classList.toggle('on', j === hi)); e.preventDefault();
+  }
+  if (e.key === 'Escape') $('#results').hidden = true;
+});
+$('#results').addEventListener('click', e => { const b = e.target.closest('[data-hit]'); if (b) pick(+b.dataset.hit); });
+document.addEventListener('click', e => { if (!e.target.closest('.search')) $('#results').hidden = true; });
+
+// mobil sayfa
+$('#grab').addEventListener('click', () => { S.open = !S.open; $('#sheet').classList.toggle('open', S.open); $('#grab').setAttribute('aria-label', S.open ? 'Karneyi küçült' : 'Karneyi genişlet'); });
+
+renderDates();
+$('#legend').innerHTML = LEG[S.mode]();
+document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', b.dataset.mode === S.mode));
+$('#t').value = S.mins;
+renderDists(S.dist);
+})();
+</script>
+
+</html>
